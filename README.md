@@ -19,7 +19,7 @@ Setup on your local computer by following these steps:
 4. `npm install`
 5. `npm start`
 
-The latest changes will be in `development` branch. `git checkout development` to switch to that branch.
+The latest changes will be in `master` branch. The deployed version of code will be in `release` branch.
 
 #### IDE Setup
 Check the following settings in your IDE:
@@ -32,12 +32,12 @@ PS: Your commit might fail if you don't adhere to the coding standards. Do confi
 Follow these steps to contribute to this repository:
 - Fork the repository
 - Clone your forked repository
-- Create a feature branch from `development` branch and work on it
+- Create a feature branch from `master` and work on it
 - Commit the changes to your feature branch
-- Submit a PR to the `development` branch of this repository (Please don't submit to the `master`)
+- Submit a PR to the `master` branch of this repository
 - People in the community can review your code (And so can you for other's PRs)
-- Once approved, it will be merged with the `development` branch
-- On our release cycle, changes from `development` will be merged to `master`.
+- Once approved, it will be merged with the `master` branch
+- On our release cycle, changes from `master` will be merged to `release`.
 
 ## Raising an issue
 To raise an issue, please provide us with as much detail as possible.
