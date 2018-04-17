@@ -1,34 +1,18 @@
 {
-  "name": "client",
-  "version": "0.1.0",
+  "name": "just-notes",
+  "version": "0.0.0",
   "private": true,
-  "dependencies": {
-    "axios": "^0.18.0",
-    "gsap": "^1.20.4",
-    "prop-types": "^15.5.10",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2"
-  },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-prettier": "^2.6.0",
-    "husky": "^1.0.0-rc.1",
-    "prettier": "1.12.0",
-    "react-scripts": "1.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint ."
+    "start": "node ./bin/www",
+    "client": "cd client && npm start"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
   }
 }
