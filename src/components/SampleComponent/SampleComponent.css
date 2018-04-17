@@ -1,0 +1,9 @@
+.SampleComponent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4e4e4e;
+  font-size: 24px;
+}

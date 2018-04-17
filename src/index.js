@@ -1,10 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import "bootstrap/dist/css/bootstrap.min.css";
-import './App.css';
-import "bootstrap";
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import App from "./App";
+import RouteManager from "./RouteManager";
+import store from "./core/store";
+
+import "./index.css";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App>
+      <RouteManager />
+    </App>
+  </Provider>,
+  document.getElementById("root")
+);
