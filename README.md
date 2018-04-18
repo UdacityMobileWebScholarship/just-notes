@@ -45,3 +45,6 @@ Follow these steps to contribute to this repository:
 
 ## Raising an issue
 To raise an issue, please provide us with as much detail as possible.
+
+## Discussion
+ - Join our Slack team at [#cp_notes_app](https://mobilewebindiascholar.slack.com/messages/CA6V6GDGQ)
