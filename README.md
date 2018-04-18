@@ -6,18 +6,22 @@ A simple yet powerful notes app.
 
 #### Tools
 You need following tools to run this project:
-- Node.js
-- npm
-- yarn
-- Web Browser
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/get-npm)
+- [Git](https://git-scm.com/)
+- [yarn](https://yarnpkg.com/en/docs/install)
+- Web Browser - prefer [Chrome](https://www.google.com/chrome/)
 
 #### Run Locally
 Setup on your local computer by following these steps:
 1. Fork the repository
-2. `git clone https://github.com/<you-user-name>/just-notes.git`
-3. `cd just-notes`
-4. `npm install`
-5. `npm start`
+2. Run these commands in the CLI
+```
+git clone https://github.com/<you-user-name>/just-notes.git
+cd just-notes
+npm install
+npm start
+```
 
 The latest changes will be in `master` branch. The deployed version of code will be in `release` branch.
 
@@ -41,3 +45,6 @@ Follow these steps to contribute to this repository:
 
 ## Raising an issue
 To raise an issue, please provide us with as much detail as possible.
+
+## Discussion
+ - Join our Slack team at [#cp_notes_app](https://mobilewebindiascholar.slack.com/messages/CA6V6GDGQ)
