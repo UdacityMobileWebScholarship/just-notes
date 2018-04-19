@@ -3,9 +3,9 @@
 <!-- Thank you for contributing by opening an issue! Please review this guide before submitting your issue.
     - If you are opening an issue because you would like to propose a new feature, write the title as "Feature Request:" followed by a short description of the feature.
     - Make sure that you are using the correct version of Node.js. You need to have version v6+ for everything to work fine.
-    - Ensure that your new issue conforms to the contribution guidelines: https://github.com/UdacityMobileWebScholarship/just-notes/CONTRIBUTING.md
+    - Ensure that your new issue conforms to the contribution guidelines: https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/CONTRIBUTING.md
     - Please do read #Bug Reports, #Suggestions guidelines :
-    https://github.com/UdacityMobileWebScholarship/just-notes/README.md
+    https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/README.md
     - TODO - After reading this template you can remove this template while submitting an issue -->
 
 
