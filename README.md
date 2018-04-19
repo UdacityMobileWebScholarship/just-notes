@@ -63,7 +63,7 @@ Please visit [here](https://github.com/UdacityMobileWebScholarship/just-notes/pr
 
 ## Contributing
 ##### You ready to help us improve? Get started with any of the options below:
-**[Pull Request](#pull-request)** - **[Bug Reports](#bug-reports)** - **[Suggestions](#suggestions)** - **[Good First Issue](#good-first-issue)**
+**[Pull Request](#repeat-pull-request)** - **[Bug Reports](#beetle-bug-reports)** - **[Suggestions](#pencil2-suggestions)** - **[Good First Issue](#hashone-good-first-issue)**
 
 #### :repeat: Pull Request
 If you want to improve an existing feature or build a feature from our feature list, do the following:
@@ -78,7 +78,7 @@ If you want to improve an existing feature or build a feature from our feature l
 
 #### :beetle: Bug Reports
 To submit a bug report to us kindly check if the same issue has already been opened with us. If so, then kindly don't open another issue or else open a new thread and provide us with as much details as possible.
-If you feel comfortable you can even send us a [Pull Request](#pull-request).
+If you feel comfortable you can even send us a [Pull Request](#repeat-pull-request).
 
 #### :pencil2: Suggestions
 If you have a new feature idea or a way in which we can improve our app, drop us a line on our issue tracker.
