@@ -33,7 +33,7 @@ You need following tools to run this project:
 - Then run the following commands from your terminal/ git bash:
 
     ```
-    > git clone https://github.com/UdacityMobileWebScholarship/just-notes/just-notes.git
+    > git clone https://github.com/UdacityMobileWebScholarship/just-notes.git
     > cd just-notes
     > git checkout release
     > npm install
