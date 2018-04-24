@@ -1,3 +1,183 @@
-.Home {
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.navbar {
+  background-color: #6a61c0;
+  padding: 0;
+  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
+}
+.navbar-light .navbar-brand {
+  color: #eee;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.search-field {
+  padding: 0;
+}
+.search-field .form-control {
+  border: none;
+}
+.form-control {
+  color: inherit;
+  font-size: 4vmin;
+  padding: 10px 15px;
+  /*margin: 5px 0;*/
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+.sec {
+  height: calc(100vh - 58px);
+}
+.sec-left {
+  background-color: #8981d8;
+  padding: 0;
+}
+.lst {
+  height: 92%;
+}
+.lst .nav-link {
+  color: #fff;
+  border-left: 4px solid transparent;
+}
+.lst .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.lst .nav-link.active {
+  border-color: #fff;
+}
+.note-badge {
+  float: right;
+}
+.btn-share {
+  color: #fff;
+  padding: 5px 6px;
+  margin: 0 auto;
+}
+.btn-share:hover {
+  color: #eee;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.sec-right {
+  background-color: #fafafa;
+  overflow: auto;
+}
+.pad {
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.toolbar {
+  background: #fff;
+  padding: 0 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.toolbar .btn-light {
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+.toolbar .btn:hover {
+  background-color: #eee;
+  background-color: rgba(137, 129, 216, 0.2);
+}
+.btn-snow {
+  color: #212529;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.btn-snow:hover {
+  color: #212529;
+  background-color: #fff;
+}
+.btn-snow:not(:disabled):not(.disabled).active:focus,
+.btn-snow:not(:disabled):not(.disabled):active:focus,
+.show > .btn-snow.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+.btn-snow:not(:disabled):not(.disabled).active,
+.btn-snow:not(:disabled):not(.disabled):active,
+.show > .btn-snow.dropdown-toggle {
+  color: #212529;
+  background-color: #dae0e5;
+  border-color: #d3d9df;
+}
+.btn-snow.focus,
+.btn-snow:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+.note-title {
   width: 100%;
+  font-size: 4vmin;
+  font-weight: 400;
+  background-color: #fafafa;
+  border: none;
+  padding: 5px 15px;
+  border-bottom: 2px solid transparent;
+}
+.pad .note-title:focus {
+  border-color: rgba(137, 129, 216, 0.55);
+}
+.pad input,
+.pad textarea {
+  outline: none;
+  padding-left: 15px;
+}
+.pad textarea {
+  display: block;
+  font-size: 4.5vmin;
+  font-weight: 300;
+  height: 250px;
+  border: none;
+  border-bottom: 4px solid transparent;
+  width: 100%;
+  resize: none;
+}
+.pad textarea:focus {
+  border-color: rgba(137, 129, 216, 0.55);
+}
+.notes {
+  padding-top: 5px;
+}
+.note-shell {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  min-height: 200px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.note-shell.active,
+.note-shell:hover {
+  color: #fff;
+  background-color: #8981d8;
+}
+.note-shell:hover .btn-link,
+.note-shell.active .btn-link {
+  color: #fff;
+}
+.note-shell:hover .text-muted,
+.note-shell.active .text-muted {
+  color: #eee !important;
+}
+.shell-header {
+  display: flex;
+}
+.note-shell .btn {
+  opacity: 0;
+  transition: none;
+}
+.note-shell:hover .btn,
+.note-shell .btn:hover {
+  opacity: 1;
+}
+.shell-title {
+  font-weight: 400;
 }
