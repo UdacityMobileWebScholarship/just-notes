@@ -1,15 +1,24 @@
 import React, { PureComponent, Fragment } from "react";
-import { Link } from "react-router-dom";
+import Navbar from "./navbar.jsx";
+import LeftMenu from "./left-menu.jsx";
+import NotePad from "./note-pad.jsx";
 import "./Home.css";
 
 const noteSamples = [
+  { title: "List", text: "<li>Helli</li><li>Hola</li>" },
   { title: "Simple", text: "Hello", timeStamp: "18 April 2018" },
-  { title: "Somethings", text: "comming more.." },
-  { title: "Comming up next", text: "in about .." },
+  { title: "Somethings", text: "coming more.." },
+  { title: "Coming up next", text: "in about .." },
   { title: "Wait a min", text: "for something special" },
   { title: "surprise", text: "something is here" }
 ];
-const NoteShell = ({ active, title, text, timeStamp = "18 April 2018" }) => (
+const NoteShell = ({
+  active,
+  title,
+  text: __html,
+  timeStamp = "18 April 2018",
+  onClick
+}) => (
   <div className="col-3">
     <div className={`note-shell${active ? " active" : ""}`}>
       <div className="shell-header">
@@ -22,11 +31,14 @@ const NoteShell = ({ active, title, text, timeStamp = "18 April 2018" }) => (
             <i className={`fa fa-${a}`} />
           </button>
         ))}
-        <span className="text-muted ml-auto">{timeStamp}</span>
+        <span className="text-muted ml-auto stamp">{timeStamp}</span>
       </div>
-      <div className="shell-body">
+      <div className="shell-body" onClick={onClick}>
         <h4 className="shell-title">{title}</h4>
-        <span className="font-weight-light text-muted">{text}</span>
+        <span
+          className="font-weight-light text-muted"
+          dangerouslySetInnerHTML={{ __html }}
+        />
       </div>
     </div>
   </div>
@@ -34,92 +46,45 @@ const NoteShell = ({ active, title, text, timeStamp = "18 April 2018" }) => (
 
 class Home extends PureComponent {
   static displayName = "Home";
-
+  state = {
+    showPad: false,
+    pad: { title: "", text: "" }
+  };
+  updatePad = pad => {
+    this.setState({ pad });
+  };
+  shellToPad = ({ target, currentTarget: shell }) => {
+    const title = shell.querySelector(".shell-title").textContent;
+    const text = shell.querySelector(".shell-body .text-muted").textContent;
+    this.setState({ showPad: true, pad: { title, text } });
+    const _el = document.querySelector(".note-shell.active");
+    if (_el) {
+      _el.classList.remove("active");
+    }
+    shell.parentElement.classList.add("active");
+  };
   render() {
     return (
       <Fragment>
-        <nav className="navbar navbar-expand navbar-light">
-          <div className="col-2 text-center">
-            <a href="/" className="navbar-brand">
-              Just Notes
-            </a>
-          </div>
-          <form className="search-field col">
-            <input type="text" className="form-control" placeholder="Search" />
-          </form>
-          <div
-            className="navbar-nav col-1"
-            style={{ padding: "10px 0", backgroundColor: "#fff" }}
-          >
-            <button
-              type="button"
-              className="btn btn-link"
-              style={{ backgroundColor: "#fff" }}
-            >
-              <i className="fa fa-cog fa-lg fa-fw" />
-            </button>
-          </div>
-        </nav>
+        <Navbar />
         <div className="container-fluid page-home">
           <div className="row secs">
-            <div className="col-2 sec sec-left">
-              <nav className="nav flex-column pt-4 lst">
-                <Link to="/" className="nav-link active">
-                  My Notes <span className="note-badge">15</span>
-                </Link>
-                <Link to="/keys" className="nav-link">
-                  Hot Keys
-                </Link>
-              </nav>
-              <nav className="d-flex">
-                {["facebook", "linkedin", "twitter"].map(a => (
-                  <button
-                    key={`share-btn-${a}`}
-                    type="button"
-                    className="btn btn-link btn-share"
-                  >
-                    <i className={`fa fa-${a} fa-fw`} />
-                  </button>
-                ))}
-              </nav>
-            </div>
-            <div className="col sec sec-right">
-              <div className="row notepad">
-                <div className="col my-4">
-                  <div className="toolbar">
-                    {["bold", "italic", "underline", "strikethrough"].map(a => (
-                      <button
-                        key={`tool-${a}`}
-                        type="button"
-                        className="btn btn-light"
-                      >
-                        <i className={`fa fa-${a} fa-fw`} />
-                      </button>
-                    ))}
+            <LeftMenu />
+            <div className="col sec sec-right pt-4 px-5">
+              {!this.state.showPad ? (
+                <div className="row">
+                  <div className="col-12 text-right">
+                    <button type="button" className="btn btn-in-theme">
+                      <i className="fa fa-plus" /> CREATE NEW
+                    </button>
                   </div>
                 </div>
-                <div className="col p-4 text-right">
-                  <button type="button" className="btn btn-link">
-                    Delete Note
-                  </button>
-                  <button type="button" className="btn btn-snow text-uppercase">
-                    AutoSave Enabled
-                  </button>
-                </div>
-                <div className="col-12">
-                  <div className="pad">
-                    <input
-                      type="text"
-                      className="note-title"
-                      placeholder="Add a title"
-                    />
-                    <textarea placeholder="its empty here. Let's write something..." />
-                  </div>
-                </div>
-              </div>
-              <div className="row notes">
+              ) : (
+                <NotePad {...this.state.pad} updatePad={this.updatePad} />
+              )}
+              <div className="row notes mt-2">
                 {noteSamples.map((a, i) => (
-                  <NoteShell key={`n-${i}`} active={i === 0} {...a} />
+                  <NoteShell key={`n-${i}`} {...a} onClick={this.shellToPad} />
                 ))}
               </div>
             </div>
