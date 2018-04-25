@@ -46,7 +46,8 @@ Check the following settings in your IDE:
 - `editorconfig` plugin is installed and enabled.
 - `eslint` plugin if required is installed and setup
 
-:warning: ***Your commit might fail if you don't adhere to the coding standards. Do configure your IDE with `eslint` to avoid that trouble.***
+> :warning: **Warning!!**  
+> ***Your commit might fail if you don't adhere to the coding standards. Do configure your IDE with `eslint` to avoid that trouble.***
 
 ## Discussion  
 Join us on our slack team at **[#cp_notes_app](https://mobilewebindiascholar.slack.com/messages/CA6V6GDGQ/)**.
@@ -60,6 +61,9 @@ Join us on our slack team at **[#cp_notes_app](https://mobilewebindiascholar.sla
 
 ## Feature List
 Please visit [here](https://github.com/UdacityMobileWebScholarship/just-notes/projects/1) to see the features list, features being worked on, and features completed for our app.
+
+## Design Guidelines
+To start contributing please stick to our [design guidelines](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/design-guidelines.md).
 
 ## Contributing
 ##### You ready to help us improve? Get started with any of the options below:
