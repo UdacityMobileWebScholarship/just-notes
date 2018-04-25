@@ -1,0 +1,27 @@
+2018-04-24T13:12:01.802587200 0.013862s notice: In recursion: removing file 'C:\\Users\\Nagen\\Desktop\\Demo\\rethinkdb_data\\tmp'
+2018-04-24T13:12:01.803587900 0.014668s warn: Trying to delete non-existent file 'C:\\Users\\Nagen\\Desktop\\Demo\\rethinkdb_data\\tmp'
+2018-04-24T13:12:01.806012800 0.017648s notice: Initializing directory C:\\Users\\Nagen\\Desktop\\Demo\\rethinkdb_data
+2018-04-24T13:12:01.807013800 0.018709s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory 'C:\\Users\\Nagen\\Desktop\\Demo\\rethinkdb_data' did not already exist or is empty.)
+2018-04-24T13:12:01.807013801 0.018798s notice: Running rethinkdb 2.3.6-windows (MSC 190024215)...
+2018-04-24T13:12:01.810594500 0.021790s notice: Running on 6.2.9200 (Windows 8, Server 2012)
+2018-04-24T13:12:01.810759500 0.021906s notice: Loading data from directory C:\\Users\\Nagen\\Desktop\\Demo\\rethinkdb_data
+2018-04-24T13:12:02.265234600 0.476702s info: Automatically using cache size of 2823 MB
+2018-04-24T13:12:02.267236000 0.478862s notice: Listening for intracluster connections on port 29015
+2018-04-24T13:12:02.269236500 0.480837s notice: Listening for client driver connections on port 28015
+2018-04-24T13:12:02.270241900 0.481403s notice: Listening for administrative HTTP connections on port 8080
+2018-04-24T13:12:02.270241901 0.481415s notice: Listening on cluster address: 127.0.0.1
+2018-04-24T13:12:02.270241902 0.481420s notice: Listening on driver address: 127.0.0.1
+2018-04-24T13:12:02.270241903 0.481425s notice: Listening on http address: 127.0.0.1
+2018-04-24T13:12:02.270241904 0.481429s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-04-24T13:12:02.270241905 0.481434s notice: Server ready, "DESKTOP_D6TRM36_6k9" a29d6d9c-73d1-4ff7-bc76-1df0c0e9893a
+2018-04-24T13:13:40.946650400 99.161883s info: Table 45727768-f6d4-4dfa-9646-a5004375b65f: Starting a new Raft election for term 1.
+2018-04-24T13:13:40.946650401 99.162381s info: Table 45727768-f6d4-4dfa-9646-a5004375b65f: Added replica on this server.
+2018-04-24T13:13:41.019119800 99.238589s info: Table 45727768-f6d4-4dfa-9646-a5004375b65f: This server is Raft leader for term 1. Latest log index is 0.
+2018-04-24T13:24:52.368913400 770.581644s info: Table db073696-90d4-479f-a92b-7f2c0a0c1837: Starting a new Raft election for term 1.
+2018-04-24T13:24:52.368913401 770.581956s info: Table db073696-90d4-479f-a92b-7f2c0a0c1837: Added replica on this server.
+2018-04-24T13:24:52.455003300 770.666842s info: Table db073696-90d4-479f-a92b-7f2c0a0c1837: This server is Raft leader for term 1. Latest log index is 0.
+2018-04-24T13:29:20.243574000 1038.457021s notice: Server got Control-C; shutting down...
+2018-04-24T13:29:20.243574001 1038.457138s notice: Shutting down client connections...
+2018-04-24T13:29:20.243574002 1038.459451s notice: All client connections closed.
+2018-04-24T13:29:20.243574003 1038.459511s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-04-24T13:29:20.259174600 1038.479937s notice: Storage engine shut down.
