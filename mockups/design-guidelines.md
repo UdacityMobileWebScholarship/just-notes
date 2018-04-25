@@ -5,7 +5,7 @@ The following is the styleguide that will be followed throughout the project:
 ### Important Points To Note
 1. Please read the (contributing guide)[https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/contributing.md] to start with the UI contribution. **_Create each screen in separate branches_**.
 
-2. Make sure to keep the reusable components of the screen in a separate folder called `partial` and use it while designing screens inside `components`
+2. Make sure to keep the reusable components of the screen (like navbar, sidebar) in a separate folder called `partial` inside `components`and use it while designing screens.
 
 3. We are using Bootstrap CSS as the base of the project so that making the layout becomes faster. However, the components will be designed according to the design guidelines and the mockups screens. Make custom stylesheets for every screen and place them inside components folder.
 
