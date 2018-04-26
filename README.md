@@ -1,4 +1,4 @@
-<img height="120" src="https://files.slack.com/files-pri/T92UDPCT1-FA96KEYJZ/iteration-2.png?pub_secret=c4ade9e2bf"> 
+<img height="120" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/logo.png"> 
 
 # JustNotes
 > **A simple, yet powerful notes app**  

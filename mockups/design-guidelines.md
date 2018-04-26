@@ -3,7 +3,7 @@ The following is the styleguide that will be followed throughout the project:
 <img  width="100%" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/styleguide.jpg" alt="Styleguide" />
 
 ### Important Points To Note
-1. Please read the (contributing guide)[https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/contributing.md] to start with the UI contribution. **_Create each screen in separate branches_**.
+1. Please read the [contributing guide](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/contributing.md) to start with the UI contribution. **_Create each screen in separate branches_**.
 
 2. Make sure to keep the reusable components of the screen (like navbar, sidebar) in a separate folder called `partial` inside `components`and use it while designing screens.
 
