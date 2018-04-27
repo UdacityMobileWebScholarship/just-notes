@@ -3,27 +3,23 @@ const morgan = require("morgan")
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const app = express()
- 
+const mongoDb = require('./config/mongoDB') 
+
 //parsers
 app.use(cors())
 app.use(morgan("dev"))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// server client files
-app.use(express.static(__dirname + "/../client/build"))
-app.get('/', (req, res)=>{
-   res.sendFile('/../client/build/index.html')
-})
 
 // redirector
 app.get('*', (req, res) => {
-  res.redirect('/')
+  res.status(404)
 })
 
 
 //routes
-app.use("/notes", require("./controllers/notes.controller"))
+app.use("/notes", require("./routes/notes"))
 
 
 module.exports = app
