@@ -1,9 +1,11 @@
-const mongoDB = require('../config/mongoDB')
+const mongoose = require('mongoose')
+const shortId = require('shortid')
 
-const note = mongoDB.Schema({
+const notesSchema = mongoose.Schema({
     slug:{
         type: String,
-        required: [true, "smalid is required"]
+        required: [true, "smalid is required"],
+        default: shortId.generate()
     },
     title: {
         type: String,
@@ -15,18 +17,20 @@ const note = mongoDB.Schema({
     },
     created_at: {
         type: Date,
-        required: [true, "date is required"]
+        required: [true, "date is required"],
+        default: Date.now
     },
     updated_at: {
         type: Date,
-        required: [true, "date is required"]
+        required: [true, "date is required"],
+        default: Date.now
     },
     deleted:{
         type: Boolean,
-        required: [true, "boolean required"]
+        required: [true, "boolean required"],
+        default: false
     }
 
 })
 
-
-module.exports = mongoDB.model('NotesSchema', note)
+module.exports = mongoose.model('Note', notesSchema)
