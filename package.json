@@ -1,19 +1,19 @@
 {
   "name": "just-notes",
   "version": "1.0.0",
-  "description": "<img height=\"120\" src=\"https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/logo.png\">",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sounak07/just-notes.git"
+    "url": "https://github.com/UdacityMobileWebScholarship/just-notes.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sounak07/just-notes/issues"
+    "url": "https://github.com/UdacityMobileWebScholarship/just-notes/issues"
   },
-  "homepage": "https://github.com/sounak07/just-notes#readme"
+  "homepage": "https://github.com/UdacityMobileWebScholarship/just-notes#readme"
 }
