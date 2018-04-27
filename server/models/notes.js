@@ -1,6 +1,6 @@
 const mongoDB = require('../config/mongoDB')
 
-const notes = mongoDB.Schema({
+const note = mongoDB.Schema({
     slug:{
         type: String,
         required: [true, "smalid is required"]
@@ -9,7 +9,7 @@ const notes = mongoDB.Schema({
         type: String,
         required: [true, "title is required"]
     },
-    note : {
+    notes : {
         type: String,
         required: [true, "note is required"]
     },
@@ -29,4 +29,4 @@ const notes = mongoDB.Schema({
 })
 
 
-module.exports = mongoDB.model('Notes', notes)
+module.exports = mongoDB.model('NotesSchema', note)
