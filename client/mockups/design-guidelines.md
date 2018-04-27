@@ -1,6 +1,6 @@
 ## Design Guidelines for UI Contribution
 The following is the styleguide that will be followed throughout the project:
-<img  width="100%" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/styleguide.jpg" alt="Styleguide" />
+<img  width="100%" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/styleguide.jpg" alt="Styleguide" />
 
 ### Important Points To Note
 1. Please read the [contributing guide](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/contributing.md) to start with the UI contribution. **_Create each screen in separate branches_**.
@@ -19,24 +19,24 @@ The following is the styleguide that will be followed throughout the project:
 
 ### Home Screen
 
-| ![Home Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/web/basic/light/notes-app.jpg) ![Home Screen for Web(Hover)](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/web/basic/light/notes-app-hover.jpg) | ![Home Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/mobile%20mockup-light/1.%20notes-mobile-main.png) |
+| ![Home Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/web/basic/light/notes-app.jpg) ![Home Screen for Web(Hover)](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/web/basic/light/notes-app-hover.jpg) | ![Home Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/mobile%20mockup-light/1.%20notes-mobile-main.png) |
 |:--:| :--:| 
 | *Web* | *Mobile* |
 
 ### New Note Screen
 
-| ![New Note Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/web/basic/light/notes-app-open-text-formatter.jpg) | ![New Note Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/mobile%20mockup-light/4.%20notes-mobile-open-text-formatter.png) |
+| ![New Note Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/web/basic/light/notes-app-open-text-formatter.jpg) | ![New Note Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/mobile%20mockup-light/4.%20notes-mobile-open-text-formatter.png) |
 |:--:| :--:| 
 | *Web* | *Mobile* |
 
 ### Reading Notes Screen
 
-| ![Reading Notes Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/web/basic/light/notes-app-open-text.jpg) | ![Reading Notes Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/mobile%20mockup-light/2.%20notes-mobile-open-note.png) |
+| ![Reading Notes Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/web/basic/light/notes-app-open-text.jpg) | ![Reading Notes Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/mobile%20mockup-light/2.%20notes-mobile-open-note.png) |
 |:--:| :--:| 
 
 ### Settings Screen
 
-| ![Settings Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/web/basic/light/notes-app-settings%20menu.jpg) | ![Settings Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/mobile%20mockup-light/5.%20notes-mobile-settings.png) |
+| ![Settings Screen for Web](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/web/basic/light/notes-app-settings%20menu.jpg) | ![Settings Screen for Mobile](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/mobile%20mockup-light/5.%20notes-mobile-settings.png) |
 |:--:| :--:| 
 | *Web* | *Mobile* |
 
