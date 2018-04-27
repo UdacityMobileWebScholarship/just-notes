@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const config = require('./config')
+const config = require('./env')
 
 mongoose.connect(config.mongoUri, (err) => {
     if (err) {
