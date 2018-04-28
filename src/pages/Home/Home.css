@@ -81,7 +81,7 @@
 .btn-in-theme {
   color: #eee;
   background-color: var(--theme);
-  border: tranaparent;
+  border: transparent;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
 }
 .btn-in-theme:hover {

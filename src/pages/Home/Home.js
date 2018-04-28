@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from "react";
-import Navbar from "./navbar.jsx";
-import LeftMenu from "./left-menu.jsx";
+import Navbar from "../../components/partial/Navbar/navbar.js";
+import LeftMenu from "../../components/partial/LeftMenu/leftMenu";
 import NotePad from "./note-pad.jsx";
 import "./Home.css";
 

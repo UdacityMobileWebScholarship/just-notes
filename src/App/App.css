@@ -1,1 +1,5 @@
 @import "~bootstrap-css-only/css/bootstrap.min.css";
+@font-face {
+    font-family: SavoyeLetPlain;
+    src: url("./fonts/Savoye LET.ttc");
+}

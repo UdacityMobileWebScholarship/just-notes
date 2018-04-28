@@ -1,0 +1,116 @@
+@import "../themes/dark.css";
+
+#navContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: 60px;
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+}
+#brand {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--seconday-color);
+    font-size: 48px;
+    color: var(--white-100);
+    line-height: 17px;
+}
+#searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warm-grey);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 1001;
+    background-color: var(--white-100);
+    box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
+}
+#searchForm > input[type=text] {
+    display: none;
+}
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 576px) {
+    #brand {
+        width: 100vw;
+    }
+    #searchbar {
+        display: flex;
+    }
+    #searchForm > input[type=text] {
+        display: none;
+    }
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+    #brand {
+        width: 100vw;
+    }
+    #searchbar {
+        display: flex;
+    }
+    #searchForm > input[type=text] {
+        display: none;
+    }
+}
+
+/** Large devices (desktops, 992px and up) **/
+@media (min-width: 992px) {
+    #brand {
+        width: 18vw;
+    }
+    #searchbar {
+        display: flex;
+        position: relative;
+        flex: 1;
+    }
+    #searchForm {
+        margin-left: 40px;
+        margin-right: 15px;
+        display: flex;
+        flex: 1;
+    }
+    #searchIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+        margin-right: 15px;
+    }
+    #searchForm > input[type=text] {
+        display: flex;
+        border: none;
+        width: 100%;
+    }
+    #settings {
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+    }
+}
+
+/** Extra large devices (large desktops, 1200px and up) **/
+@media (min-width: 1200px) {
+    #brand {
+        width: 18vw;
+    }
+    #searchbar {
+        display: flex;
+    }
+    #searchForm > input[type=text] {
+        display: flex;
+    }
+}
