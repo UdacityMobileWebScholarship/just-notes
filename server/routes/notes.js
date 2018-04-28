@@ -3,9 +3,11 @@ const router = express.Router()
 const notesController = require('../controllers/notes')
 
 //crud operations
-router.get('/create', notesController.create)
-router.get('/delete', notesController.delete)
-router.get('/update', notesController.update)
-router.get('/insert', notesController.insert)
+router.post('/notes', notesController.create)
+router.delete('/notes/:id', notesController.delete)
+router.update('/notes/:id', notesController.update)
+router.get('/notes/:id', notesController.get)
+router.get('/notes', notesController.index)
+//TODO getting all notes
 
 module.exports = router

@@ -13,7 +13,11 @@ const notesController = {
 
     },
 
-    insert: (req, res) => {
+    index: (req, res) => {
+
+    },
+    
+    get: (req, res) => {
 
     }
 }
