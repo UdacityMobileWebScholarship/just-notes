@@ -5,7 +5,7 @@ const notesSchema = mongoose.Schema({
     slug:{
         type: String,
         required: [true, "smalid is required"],
-        default: shortId.generate()
+        default: shortId.generate
     },
     title: {
         type: String,
