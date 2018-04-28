@@ -19,7 +19,7 @@ app.get('*', (req, res) => {
 
 
 //routes
-app.use("/notes", require("./routes/notes"))
+app.use("/", require("./routes/notes"))
 
 
 module.exports = app
