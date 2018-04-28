@@ -5,7 +5,7 @@ mongoose.connect(config.mongoUri, (err) => {
     if (err) {
         throw err
     } else {
-        console.log("mongodb connected:D")
+        console.log("mongodb connected")
     }
 })
 
