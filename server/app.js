@@ -12,14 +12,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+//routes
+app.use("/", require("./routes/notes"))
+
+
 // redirector
 app.get('*', (req, res) => {
   res.status(404)
 })
-
-
-//routes
-app.use("/", require("./routes/notes"))
-
 
 module.exports = app
