@@ -12,21 +12,15 @@ const notesController = {
                 return res.status(200).json({
                     error: false,
                     message: 'Note created',
-                    note: {
-                        _id: note._id,
-                        title: note.title,
-                        notes: note.notes
-                    }
+                    note: note
                 });
             })
             .catch(error => {
                 return res.status(500).json({
                     error: true,
-                    message: 'Error Creating A Note!'
+                    message: 'Error Creating Note!'
                 });
             });
-
-        console.log(`create: ${req.body}`);
     },
 
     update: (req, res) => {
@@ -54,7 +48,6 @@ const notesController = {
                     message: 'Error Fetching Notes!'
                 });
             });
-        console.log(`index: ${req.body}`);
     },
 
     get: (req, res) => {
