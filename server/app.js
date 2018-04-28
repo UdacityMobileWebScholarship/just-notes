@@ -3,7 +3,7 @@ const morgan = require("morgan")
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const app = express()
-// const mongoDb = require('./config/mongoDB') 
+const mongoDb = require('./config/mongoDB') 
 
 //parsers
 app.use(cors())
@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 
 //routes
-app.use("/", require("./routes/notes"))
+app.use("/", require("./routes"))
 
 
 // redirector
