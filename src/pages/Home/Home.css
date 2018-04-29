@@ -1,157 +1,19 @@
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-:root {
-  --theme-active: #6a61c0;
-  --theme: #8981d8;
+.pageContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100vh;
 }
-.navbar {
-  background-color: #6a61c0;
-  padding: 0;
-  box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
-}
-.navbar-light .navbar-brand {
-  color: #eee;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-.sec {
-  height: calc(100vh - 58px);
-}
-.sec-left {
-  background-color: #8981d8;
-  padding: 0;
-}
-.lst {
-  height: 92%;
-}
-.lst .nav-link {
-  color: #fff;
-  border-left: 4px solid transparent;
-}
-.lst .nav-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-.lst .nav-link.active {
-  border-color: #fff;
-}
-.note-badge {
-  float: right;
-}
-.btn-share {
-  color: #fff;
-  padding: 5px 6px;
-  margin: 0 auto;
-}
-.btn-share:hover {
-  color: #eee;
-  background-color: rgba(255, 255, 255, 0.15);
-}
-.sec-right {
-  overflow: auto;
-}
-
-.btn-snow {
-  color: #212529;
-  background-color: #fff;
-  border: none;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
-}
-.btn-snow:hover {
-  color: #212529;
-  background-color: #fff;
-}
-.btn-snow:not(:disabled):not(.disabled).active:focus,
-.btn-snow:not(:disabled):not(.disabled):active:focus,
-.show > .btn-snow.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-.btn-snow:not(:disabled):not(.disabled).active,
-.btn-snow:not(:disabled):not(.disabled):active,
-.show > .btn-snow.dropdown-toggle {
-  color: #212529;
-  background-color: #dae0e5;
-  border-color: #d3d9df;
-}
-.btn-snow.focus,
-.btn-snow:focus {
-  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-.btn-in-theme {
-  color: #eee;
-  background-color: var(--theme);
-  border: transparent;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
-}
-.btn-in-theme:hover {
-  color: #fff;
-  background-color: var(--theme-active);
-}
-.btn-in-theme:not(:disabled):not(.disabled).active:focus,
-.btn-in-theme:not(:disabled):not(.disabled):active:focus,
-.show > .btn-in-theme.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-.btn-in-theme:not(:disabled):not(.disabled).active,
-.btn-in-theme:not(:disabled):not(.disabled):active,
-.show > .btn-snow.dropdown-toggle {
-  color: #fff;
-  background-color: var(--theme-active);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.btn-in-theme.focus,
-.btn-in-theme:focus {
-  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
-}
-.note-title {
-  width: 100%;
-  font-size: 4vmin;
-  font-weight: 400;
-  /*background-color: #fafafa;*/
-  border: none;
-  padding: 5px 15px;
-  border-bottom: 2px solid #eee;
-}
-.notes {
-  padding-top: 5px;
-}
-.note-shell {
-  margin: 10px;
-  padding: 15px;
-  border-radius: 5px;
-  background-color: #fff;
-  /*min-height: 200px;*/
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-}
-.note-shell.active,
-.note-shell:hover {
-  color: #fff;
-  background-color: #8981d8;
-}
-.note-shell:hover .btn-link,
-.note-shell.active .btn-link {
-  color: #fff;
-}
-.note-shell:hover .text-muted,
-.note-shell.active .text-muted {
-  color: #eee !important;
-}
-.shell-header {
+#leftContainer {
   display: flex;
 }
-.note-shell .btn {
-  opacity: 0;
-  transition: none;
+#rightContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-.note-shell:hover .btn,
-.note-shell .btn:hover,
-.note-shell.active .btn {
-  opacity: 1;
-}
-.note-shell .shell-body {
-  min-height: 140px;
-  cursor: pointer;
-}
-.shell-title {
-  font-weight: 400;
+#notesCardContainer {
+  margin-top: 100px;
 }

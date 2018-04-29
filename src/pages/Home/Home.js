@@ -67,26 +67,47 @@ class Home extends PureComponent {
     return (
       <Fragment>
         <Navbar />
-        <div className="container-fluid page-home">
-          <div className="row secs">
+        <div className="pageContainer">
+          <div id="leftContainer">
             <LeftMenu />
-            <div className="col sec sec-right pt-4 px-5">
-              {!this.state.showPad ? (
-                <div className="row">
-                  <div className="col-12 text-right">
-                    <button type="button" className="btn btn-in-theme">
-                      <i className="fa fa-plus" /> CREATE NEW
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <NotePad {...this.state.pad} updatePad={this.updatePad} />
-              )}
-              <div className="row notes mt-2">
-                {noteSamples.map((a, i) => (
-                  <NoteShell key={`n-${i}`} {...a} onClick={this.shellToPad} />
-                ))}
-              </div>
+          </div>
+          <div id="rightContainer">
+            <div id="notesCardContainer">
+              <ul>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+                <li>Some text</li>
+              </ul>
             </div>
           </div>
         </div>

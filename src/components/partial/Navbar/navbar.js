@@ -15,6 +15,9 @@ class Navbar extends Component {
             </div>
             <input type="text" placeholder="Search" />
           </div>
+          <button id="addNoteBtn" type="button">
+            <i className="fa fa-plus fa-lg" />
+          </button>
           <div id="settings">
             <i className="fa fa-cog fa-lg" />
           </div>

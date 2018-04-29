@@ -1,4 +1,5 @@
 @import "~bootstrap-css-only/css/bootstrap.min.css";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 @font-face {
     font-family: SavoyeLetPlain;
     src: url("./fonts/Savoye LET Plain1.0.ttf")format("ttf");
