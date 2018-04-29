@@ -53,6 +53,7 @@
 .linkText {
     display: flex;
     flex: 1;
+    font-weight: 600;
 }
 .linkBadge {
     color: var(--white-70);

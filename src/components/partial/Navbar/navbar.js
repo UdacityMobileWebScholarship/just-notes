@@ -11,15 +11,15 @@ class Navbar extends Component {
         <div id="searchbar">
           <div id="searchForm">
             <div id="searchIcon">
-              <i className="fa fa-search fa-lg" />
+              <i className="fas fa-search fa-lg" />
             </div>
             <input type="text" placeholder="Search" />
           </div>
           <button id="addNoteBtn" type="button">
-            <i className="fa fa-plus fa-lg" />
+            <i className="fas fa-plus fa-lg" />
           </button>
           <div id="settings">
-            <i className="fa fa-cog fa-lg" />
+            <i className="fas fa-cog fa-lg" />
           </div>
         </div>
       </div>

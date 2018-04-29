@@ -15,11 +15,11 @@
 #brand {
     width: 100vw;
     font-family: 'Marck Script', cursive;
+    font-size: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--seconday-color);
-    font-size: 48px;
     color: var(--white-100);
     line-height: 17px;
 }
@@ -39,10 +39,14 @@
 }
 #searchForm > input[type=text] {
     display: none;
+    font-size: 16px;
 }
 #addNoteBtn  {
     background-color: var(--primary-color);
     color: var(--white-100);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
     display: flex;
     align-items: center;
     justify-content: center;

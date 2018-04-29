@@ -16,9 +16,9 @@ class LeftMenu extends Component {
           </Link>
         </div>
         <div id="sharing">
-          {["facebook", "linkedin", "twitter"].map(a => (
+          {["facebook-f", "linkedin-in", "twitter"].map(a => (
             <button key={`share-btn-${a}`} type="button" className="shareBtn">
-              <i className={`fa fa-${a} fa-fw`} />
+              <i className={`fab fa-${a} fa-fw`} />
             </button>
           ))}
         </div>

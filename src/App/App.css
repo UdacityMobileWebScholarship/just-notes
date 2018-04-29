@@ -1,9 +1,11 @@
 @import "~bootstrap-css-only/css/bootstrap.min.css";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-@import url('https://fonts.googleapis.com/css?family=Marck+Script'); 
+@import "https://use.fontawesome.com/releases/v5.0.10/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
 body {
     background-color: #fafafa;
+    font-family: 'Open Sans', sans-serif;
     background-image: 
         -webkit-linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
     background-image:  
