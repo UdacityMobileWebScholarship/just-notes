@@ -34,7 +34,7 @@ const notesController = {
     },
 
     index: (req, res) => {
-        Note.find()
+        Note.find({ deleted: false })
             .exec()
             .then(notes => {
                 return res.status(200).json({
