@@ -54,9 +54,12 @@
     display: flex;
     flex: 1;
     font-weight: 600;
+    line-height: 17px;
 }
 .linkBadge {
     color: var(--white-70);
+    font-weight: 600;
+    line-height: 17px;
 }
 /** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {

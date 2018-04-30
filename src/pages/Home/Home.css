@@ -11,9 +11,42 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  padding-top: 100px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 #notesCardContainer {
-  margin-top: 100px;
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 576px) {
+  #notesCardContainer {
+    flex-direction: row;
+  }
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  #notesCardContainer {
+    flex-direction: row;
+  }
+}
+
+/** Large devices (desktops, 992px and up) **/
+@media (min-width: 992px) {
+  #notesCardContainer {
+    flex-direction: row;
+  }
+}
+
+/** Extra large devices (large desktops, 1200px and up) **/
+@media (min-width: 1200px) {
+  #notesCardContainer {
+    flex-direction: row;
+  }
 }

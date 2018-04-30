@@ -39,12 +39,15 @@
 }
 #searchForm > input[type=text] {
     display: none;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--brownish-grey);
+    line-height: 17px;
 }
 #addNoteBtn  {
     background-color: var(--primary-color);
     color: var(--white-100);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 17px;
     display: flex;
@@ -120,6 +123,7 @@
     }
     #searchForm > input[type=text] {
         display: flex;
+        height: 50px;
         border: none;
         width: 100%;
     }
