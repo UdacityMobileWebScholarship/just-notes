@@ -37,19 +37,11 @@ const notesController = {
         Note.find({ deleted: false })
             .exec()
             .then(notes => {
-                if(notes){
-                    return res.status(200).json({
-                        error: false,
-                        notes: notes,
-                        message:"Records found!"
-                    })
-                }else{
-                    return res.status(200).json({
-                        error: false,
-                        notes: {},
-                        message:"No records found!"
-                    })
-                }
+                notes = notes || []
+                return res.status(200).json({
+                    error: false,
+                    notes: notes, 
+                }) 
             })
             .catch(error => {
                 return res.status(500).json({
