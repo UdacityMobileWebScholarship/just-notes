@@ -19,9 +19,8 @@
   border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  margin-left: 40px;
-  margin-right: 40px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 /** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {
