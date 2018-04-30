@@ -11,12 +11,11 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 75px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 #notesCardContainer {
-  border: 1px solid red;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

@@ -125,8 +125,16 @@
     #searchForm > input[type=text] {
         display: flex;
         height: 50px;
-        border: none;
+        color: var(--brownish-grey);
+        outline: none;
+        border:none;
         width: 100%;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+    #searchForm > input[type=text]:focus,
+    #searchForm > input[type=text]:active {
+        border-bottom: 2px solid var(--warm-grey);
+        color: var(--black);
     }
     #addNoteBtn {
         height: 42px;
