@@ -3,6 +3,7 @@
   flex: 1;
   flex-direction: row;
   height: 100vh;
+
 }
 #leftContainer {
   display: flex;
@@ -40,6 +41,7 @@
   #notesCardContainer {
     flex-direction: row;
   }
+
 }
 
 /** Extra large devices (large desktops, 1200px and up) **/
