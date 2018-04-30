@@ -37,10 +37,11 @@ const notesController = {
         Note.find({ deleted: false })
             .exec()
             .then(notes => {
+                notes = notes || []
                 return res.status(200).json({
                     error: false,
-                    notes: notes
-                })
+                    notes: notes, 
+                }) 
             })
             .catch(error => {
                 return res.status(500).json({
