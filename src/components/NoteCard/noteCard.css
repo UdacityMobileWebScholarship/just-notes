@@ -67,13 +67,12 @@
     color: var(--white-100);
 }
 
-
 /** Small devices (landscape phones, 576px and up) 
 @media (min-width: 576px) {
     .noteContainer {
         width: 50%;
     }
-}
+}**/
 
 /** Medium devices (tablets, 768px and up) **/
 @media (min-width: 768px) {
@@ -81,8 +80,6 @@
         width: 33.33%;
     }
 }
-
-
 
 /** Large devices (desktops, 992px and up) **/
 @media (min-width: 992px) {
