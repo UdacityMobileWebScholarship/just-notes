@@ -43,8 +43,19 @@
     padding: 14px 17px 14px 22px;
 }
 .active {
-    border-left: 5px solid var(--white-100);
+    border-left: 5px solid transparent;
     padding-left: 17px;
+    position: relative;
+}
+.active:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    border: 3px solid var(--white-100);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 100%;
 }
 .link:hover {
     color: var(--white-100);

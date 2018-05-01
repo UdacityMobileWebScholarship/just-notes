@@ -19,36 +19,36 @@
 #notesCardContainer {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fill,minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 60px;
 }
 
-/** Small devices (landscape phones, 576px and up) 
+/** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {
   #notesCardContainer {
-    flex-direction: row;
+    padding-bottom: 60px;
   }
-}**/
+}
 
-/** Medium devices (tablets, 768px and up) 
+/** Medium devices (tablets, 768px and up) **/
 @media (min-width: 768px) {
   #notesCardContainer {
-    flex-direction: row;
+    padding-bottom: 60px;
   }
-}**/
+}
 
-/** Large devices (desktops, 992px and up) 
+/** Large devices (desktops, 992px and up) **/
 @media (min-width: 992px) {
   #notesCardContainer {
-    flex-direction: row;
+    padding-bottom: 0;
   }
+}
 
-}**/
-
-/** Extra large devices (large desktops, 1200px and up) 
+/** Extra large devices (large desktops, 1200px and up) **/
 @media (min-width: 1200px) {
   #notesCardContainer {
-    flex-direction: row;
+    padding-bottom: 0;
   }
-}**/
+}
