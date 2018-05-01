@@ -15,16 +15,16 @@ body {
     background-color: #fafafa;
     font-family: 'Open Sans', sans-serif;
     background-image: 
-        -webkit-linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
+        -webkit-linear-gradient(rgba(0,0,0,.04) 2px, transparent 0);
     background-image:  
-        -moz-linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
+        -moz-linear-gradient(rgba(0,0,0,.04) 2px, transparent 0);
     background-image:   
-        -o-linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
+        -o-linear-gradient(rgba(0,0,0,.04) 2px, transparent 0);
     background-image:    
-        -ms-linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
+        -ms-linear-gradient(rgba(0,0,0,.04) 2px, transparent 0);
         -webkit-background-size: 100% 2em;
         -moz-background-size: 100% 2em;
     background-image: 
-        linear-gradient(rgba(0,0,0,.1) 2px, transparent 0);
+        linear-gradient(rgba(0,0,0,.04) 2px, transparent 0);
     background-size: 100% 2em;
 }
