@@ -22,6 +22,7 @@ class Home extends Component {
               <NoteCard />
               <NoteCard />
               <NoteCard />
+              <NoteCard />
             </div>
           </div>
         </div>
