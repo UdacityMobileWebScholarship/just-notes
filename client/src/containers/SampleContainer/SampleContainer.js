@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-import SampleComponent from "../../components/SampleComponent";
+import SampleComponent from "../../components/partial/LeftMenu";
 import { sampleAction } from "../../actions/sample";
 
 class SampleContainer extends PureComponent {

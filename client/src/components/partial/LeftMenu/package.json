@@ -1,0 +1,6 @@
+{
+  "name": "leftMenu",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./leftMenu.js"
+}
