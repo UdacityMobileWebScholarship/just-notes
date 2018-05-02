@@ -1,4 +1,4 @@
-<img height="120" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/logo.png"> 
+<img height="120" src="https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/logo.png"> 
 
 # JustNotes
 > **A simple, yet powerful notes app**  
@@ -63,7 +63,7 @@ Join us on our slack team at **[#cp_notes_app](https://mobilewebindiascholar.sla
 Please visit [here](https://github.com/UdacityMobileWebScholarship/just-notes/projects/1) to see the features list, features being worked on, and features completed for our app.
 
 ## Design Guidelines
-To start contributing please stick to our [design guidelines](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/mockups/design-guidelines.md).
+To start contributing please stick to our [design guidelines](https://github.com/UdacityMobileWebScholarship/just-notes/blob/master/client/mockups/design-guidelines.md).
 
 ## Contributing
 ##### You ready to help us improve? Get started with any of the options below:
