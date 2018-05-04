@@ -54,7 +54,9 @@ class Navbar extends Component {
               <i className="fas fa-search fa-lg" />
             </div>
             {this.state.searchVisible ? (
-              <input type="text" placeholder="Search" />
+              <div id="searchField">
+                <input type="text" placeholder="Search" />
+              </div>
             ) : null}
           </div>
           <button id="addNoteBtn" type="button">

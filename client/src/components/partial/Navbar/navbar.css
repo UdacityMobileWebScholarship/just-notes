@@ -41,13 +41,16 @@
 #searchIcon:hover {
     color: var(--primary-color);
 }
-#searchForm > input[type=text] {
-    /*display: none;*/
+#searchField {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
     width: 100vw;
+}
+#searchField > input[type=text] {
+    width: inherit;
     height: 60px;
     padding-left: 25px;
     padding-right: 25px;
@@ -87,9 +90,6 @@
     #searchbar {
         display: flex;
     }
-    #searchForm > input[type=text] {
-        /*display: none;*/
-    }
     #addNoteBtn {
         display: flex;
     }
@@ -102,9 +102,6 @@
     }
     #searchbar {
         display: flex;
-    }
-    #searchForm > input[type=text] {
-        /*display: none;*/
     }
     #addNoteBtn {
         display: flex;
@@ -139,20 +136,24 @@
         color: var(--black);
         opacity: 0.7;
     }
-    #searchForm > input[type=text] {
-        position: relative;
+    #searchField {
         display: flex;
+        position: relative;
+        width: 100%;
+    }
+    #searchField > input[type=text] {
+        display: flex;
+        width: inherit;
         height: 50px;
         padding-left: 0;
         padding-right: 0;
         color: var(--brownish-grey);
         outline: none;
         border: none;
-        width: 100%;
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     }
-    #searchForm > input[type=text]:focus,
-    #searchForm > input[type=text]:active {
+    #searchField > input[type=text]:focus,
+    #searchField > input[type=text]:active {
         border-bottom: 2px solid var(--warm-grey);
         color: var(--black);
     }
@@ -189,7 +190,7 @@
     #searchbar {
         display: flex;
     }
-    #searchForm > input[type=text] {
+    #searchField {
         display: flex;
     }
 }
