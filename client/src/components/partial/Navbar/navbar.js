@@ -38,6 +38,7 @@ class Navbar extends Component {
 
   onSearchClear = () => {
     this.setState({ searchQuery: "" });
+    this.refs.searchField.focus();
   };
 
   onChange = event => {
@@ -79,6 +80,7 @@ class Navbar extends Component {
                   onChange={this.onChange.bind(this)}
                   value={this.state.searchQuery}
                   autoFocus={!!this.isMobile()}
+                  ref="searchField"
                 />
                 {this.state.searchQuery ? (
                   <div id="closeBtn" onClick={this.onSearchClear}>
