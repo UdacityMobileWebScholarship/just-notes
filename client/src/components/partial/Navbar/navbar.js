@@ -74,6 +74,7 @@ class Navbar extends Component {
                   placeholder="Search"
                   onChange={this.onChange.bind(this)}
                   value={this.state.searchQuery}
+                  autoFocus={!!this.isMobile()}
                 />
               </div>
             ) : null}
