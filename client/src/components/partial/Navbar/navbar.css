@@ -38,11 +38,53 @@
     background-color: var(--white-100);
     box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
 }
-#searchForm > input[type=text] {
-    display: none;
+.underline:after{
+    content:'';
+    width:0;
+    height:2px;
+    background: var(--black);
+    position:absolute;
+    bottom:0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.underline:focus-within:after {
+      width: 100%;
+}
+#searchIcon:hover, .searchActive {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+#searchField {
+    position: fixed;
+    background-color: var(--white-100);
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100vw;
+}
+#searchField > input[type=text] {
+    width: inherit;
+    height: 60px;
+    padding-left: 25px;
+    border: none;
+    outline: none;
     font-weight: 600;
     color: var(--brownish-grey);
     line-height: 17px;
+}
+#closeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 25px;
+    color: var(--black);
+    opacity: 0.7;
+}
+#closeBtn:hover {
+    color: var(--primary-color);
 }
 #addNoteBtn  {
     background-color: var(--primary-color);
@@ -74,9 +116,6 @@
     #searchbar {
         display: flex;
     }
-    #searchForm > input[type=text] {
-        display: none;
-    }
     #addNoteBtn {
         display: flex;
     }
@@ -89,9 +128,6 @@
     }
     #searchbar {
         display: flex;
-    }
-    #searchForm > input[type=text] {
-        display: none;
     }
     #addNoteBtn {
         display: flex;
@@ -112,8 +148,16 @@
         margin-left: 40px;
         margin-right: 15px;
         display: flex;
+        height: 100%;
+        border: none;
+        outline: none;
         flex: 1;
     }
+    /* #searchForm:focus-within{
+        border-bottom: 2px solid var(--warm-grey);
+        color: var(--black);
+
+    } */
     #searchIcon {
         display: flex;
         opacity: 0.7;
@@ -122,19 +166,39 @@
         color: var(--black);
         margin-right: 15px;
     }
-    #searchForm > input[type=text] {
-        display: flex;
-        height: 50px;
-        color: var(--brownish-grey);
-        outline: none;
-        border:none;
-        width: 100%;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    #searchIcon:hover, .searchActive {
+        color: var(--black);
+        opacity: 0.7;
+        cursor: default;
     }
-    #searchForm > input[type=text]:focus,
-    #searchForm > input[type=text]:active {
+    #searchField {
+        display: flex;
+        position: relative;
+        width: 100%;
+    }
+    #searchField > input[type=text] {
+        display: flex;
+        width: inherit;
+        height: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        color: var(--brownish-grey);
+        border: none;
+        outline: none;
+        /* transition: all 0.3s cubic-bezier(.25,.8,.25,1); */
+    }
+    /* #searchField > input[type=text]:focus,
+    #searchField > input[type=text]:active {
         border-bottom: 2px solid var(--warm-grey);
         color: var(--black);
+    }
+    #searchField > input[type=text]:focus + .fas,
+    #searchField > input[type=text]:active + .fas{
+        border-bottom: 2px solid var(--warm-grey);
+        color: var(--black);
+    } */
+    #closeBtn {
+        margin-right: 0;
     }
     #addNoteBtn {
         height: 42px;
@@ -169,7 +233,7 @@
     #searchbar {
         display: flex;
     }
-    #searchForm > input[type=text] {
+    #searchField {
         display: flex;
     }
 }
