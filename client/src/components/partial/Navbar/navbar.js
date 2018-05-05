@@ -3,18 +3,24 @@ import "./navbar.css";
 
 class Navbar extends Component {
   state = {
-    searchVisible: false
+    searchVisible: false,
+    searchQuery: ""
   };
 
   isMobile = () => {
     const width = window.innerWidth;
+    return width < 992;
+  };
 
-    if (width >= 992) {
-      this.setState({ searchVisible: true });
-      return false;
+  toggleForm = () => {
+    if (this.isMobile()) {
+      if (this.state.searchQuery) {
+        this.setState({ searchVisible: true });
+      } else {
+        this.setState({ searchVisible: false });
+      }
     } else {
-      this.setState({ searchVisible: false });
-      return true;
+      this.setState({ searchVisible: true });
     }
   };
 
@@ -30,16 +36,20 @@ class Navbar extends Component {
     }
   };
 
+  onChange = event => {
+    this.setState({ searchQuery: event.target.value });
+  };
+
   componentWillMount() {
-    this.isMobile();
+    this.toggleForm();
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.isMobile);
+    window.addEventListener("resize", this.toggleForm);
   }
 
   componentWillUnmount() {
-    window.addEventListener("resize", this.isMobile);
+    window.addEventListener("resize", this.toggleForm);
   }
 
   render() {
@@ -55,7 +65,12 @@ class Navbar extends Component {
             </div>
             {this.state.searchVisible ? (
               <div id="searchField">
-                <input type="text" placeholder="Search" />
+                <input
+                  type="text"
+                  placeholder="Search"
+                  onChange={this.onChange.bind(this)}
+                  value={this.state.searchQuery}
+                />
               </div>
             ) : null}
           </div>
