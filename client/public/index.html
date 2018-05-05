@@ -24,6 +24,13 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('../service-worker.js').then(function () { 
+          console.log("Service Worker Registered"); 
+        });
+      }
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
