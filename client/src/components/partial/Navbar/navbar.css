@@ -38,8 +38,9 @@
     background-color: var(--white-100);
     box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.14);
 }
-#searchIcon:hover {
+#searchIcon:hover, .searchActive {
     color: var(--primary-color);
+    cursor: pointer;
 }
 #searchField {
     position: fixed;
@@ -132,9 +133,10 @@
         color: var(--black);
         margin-right: 15px;
     }
-    #searchIcon:hover {
+    #searchIcon:hover, .searchActive {
         color: var(--black);
         opacity: 0.7;
+        cursor: default;
     }
     #searchField {
         display: flex;

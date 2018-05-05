@@ -60,7 +60,11 @@ class Navbar extends Component {
         </div>
         <div id="searchbar">
           <div id="searchForm">
-            <div id="searchIcon" onClick={this.onSearchButtonClick}>
+            <div
+              id="searchIcon"
+              onClick={this.onSearchButtonClick}
+              className={this.state.searchVisible ? "searchActive" : null}
+            >
               <i className="fas fa-search fa-lg" />
             </div>
             {this.state.searchVisible ? (
