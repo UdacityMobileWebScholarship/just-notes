@@ -54,7 +54,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div id="navContainer">
+      <nav id="navContainer">
         <div id="brand">
           <span>Just Notes</span>
         </div>
@@ -81,7 +81,7 @@ class Navbar extends Component {
             <i className="fas fa-cog fa-lg" />
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }
