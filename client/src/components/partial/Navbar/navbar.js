@@ -36,6 +36,10 @@ class Navbar extends Component {
     }
   };
 
+  onSearchClear = () => {
+    this.setState({ searchQuery: "" });
+  };
+
   onChange = event => {
     this.setState({ searchQuery: event.target.value });
   };
@@ -49,7 +53,7 @@ class Navbar extends Component {
   }
 
   componentWillUnmount() {
-    window.addEventListener("resize", this.toggleForm);
+    window.removeEventListener("resize", this.toggleForm);
   }
 
   render() {
@@ -76,6 +80,11 @@ class Navbar extends Component {
                   value={this.state.searchQuery}
                   autoFocus={!!this.isMobile()}
                 />
+                {this.state.searchQuery ? (
+                  <div id="closeBtn" onClick={this.onSearchClear}>
+                    <i className="fas fa-times fa-lg" />
+                  </div>
+                ) : null}
               </div>
             ) : null}
           </div>
