@@ -68,12 +68,12 @@ class Navbar extends Component {
             <div
               id="searchIcon"
               onClick={this.onSearchButtonClick}
-              className={this.state.searchVisible ? "searchActive" : null}
+              className={this.state.searchVisible ? "searchActive" : null } 
             >
               <i className="fas fa-search fa-lg" />
             </div>
             {this.state.searchVisible ? (
-              <div id="searchField">
+              <div id="searchField" className="underline">
                 <input
                   type="text"
                   placeholder="Search"
@@ -89,7 +89,9 @@ class Navbar extends Component {
                 ) : null}
               </div>
             ) : null}
+
           </div>
+
           <button id="addNoteBtn" type="button">
             <i className="fas fa-plus fa-lg" />
           </button>
