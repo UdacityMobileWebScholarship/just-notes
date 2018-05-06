@@ -9,7 +9,7 @@ import store from "./core/store";
 import "./index.css";
 import "../src/Connectivity/Offline_lang_en.css";
 import "../src/Connectivity/Offline_theme.css";
-import "offline-js";
+// import "offline-js";
 
 ReactDOM.render(
   <Provider store={store}>

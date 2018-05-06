@@ -16,9 +16,7 @@ class Navbar extends Component {
     if (this.isMobile()) {
       if (this.state.searchQuery) {
         this.setState({ searchVisible: true });
-      } else {
-        this.setState({ searchVisible: false });
-      }
+      } 
     } else {
       this.setState({ searchVisible: true });
     }
