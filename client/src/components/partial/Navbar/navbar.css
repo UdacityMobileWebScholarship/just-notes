@@ -24,6 +24,15 @@
     line-height: 17px;
 }
 
+#brand > a {
+    text-decoration: none;
+    color: var(--white-100);
+}
+#brand > a:hover {
+    text-decoration: none;
+    color: var(--white-70);
+}
+
 #searchbar {
     display: flex;
     align-items: center;
