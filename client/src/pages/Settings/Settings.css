@@ -1,0 +1,31 @@
+/* `Settings-menu` to hide body backgorund-image */
+.Setting-menu {
+    padding-top: 60px;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    font-size: 35px;
+    user-select: none;
+}
+.options .opt:first-child {
+    margin-top: 20px;
+}
+.options .opt {
+    display: flex;
+    width: 50vh;
+    margin-bottom: 20px;
+}
+.options .opt-header {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: left;
+    width: 50vh;
+    margin: 0;
+}

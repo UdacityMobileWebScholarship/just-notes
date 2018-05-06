@@ -230,7 +230,6 @@ input[type="text"]::-ms-clear {
     #settings {
         margin-right: 40px;
         display: flex;
-        opacity: 0.7;
         align-items: center;
         justify-content: center;
         color: var(--black);
