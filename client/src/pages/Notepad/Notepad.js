@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 
 import "./Notepad.css";
 
-class Editor extends Component {
+class Notepad extends Component {
   render() {
     return (
       <Fragment>
@@ -35,4 +35,4 @@ class Editor extends Component {
   }
 }
 
-export default Editor;
+export default Notepad;
