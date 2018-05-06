@@ -16,6 +16,15 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+#editorContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
 #notesCardContainer {
   display: grid;
   width: 100%;

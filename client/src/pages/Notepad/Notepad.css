@@ -1,0 +1,92 @@
+@import "../../components/partial/themes/dark.css";
+
+.editorInnerContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: var(--white-100);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+}
+.editorTop {
+  display: flex;
+  border-bottom: 1px solid var(--warm-grey);
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#noteTitle {
+  flex: 1;
+  height: 60px;
+  font-size: 20px;
+  line-height: 17px;
+  font-weight: 700;
+  border: none;
+  color: var(--black);
+}
+#noteTitle:disabled {
+  background-color: var(--white-100);
+}
+#tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 50px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#tools > a {
+  color: var(--white-70);
+  padding: 12px;
+}
+#tools > a:hover {
+  color: var(--white-100);
+}
+/** Small devices (landscape phones, 576px and up) **/
+@media (min-width: 576px) {
+  #tools {
+    width: 60%;
+  }
+}
+
+/** Medium devices (tablets, 768px and up) **/
+@media (min-width: 768px) {
+  #tools {
+    width: 50%;
+  }
+}
+
+/** Large devices (desktops, 992px and up) **/
+@media (min-width: 992px) {
+  #tools {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background-color: transparent;
+    border-radius: 0;
+  }
+  #tools > a {
+    color: var(--warm-grey);
+  }
+  #tools > a:hover {
+    color: var(--primary-color);
+  }
+  .editorInnerContainer {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 0;
+  }
+}
+
+/** Extra large devices (large desktops, 1200px and up) **/
+@media (min-width: 1200px) {
+}
