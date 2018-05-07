@@ -100,7 +100,9 @@ class Navbar extends Component {
           <div id="settings">
             {
               this.isMobile()
-              ? <Link to="/settings"><i className="fas fa-cog fa-lg" /></Link>
+              ? (<Link to={this.props.pathname === '/settings' ? '/' : '/settings'}>
+                  <i className="fas fa-cog fa-lg" />
+                </Link>)
               : (<Drop icon="fas fa-cog fa-lg" right>
                   <SettingMenu option="drop-item" />
                 </Drop>)
