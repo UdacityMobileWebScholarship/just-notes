@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
 import Drop from "../dropdown";
 import SettingMenu from "../settings-menu";
+
+import "./navbar.css";
 
 class Navbar extends Component {
   state = {
     searchVisible: false,
     searchQuery: "",
-    settingLink: true,
+    settingLink: true
   };
 
   isMobile = () => {
@@ -27,7 +28,7 @@ class Navbar extends Component {
       searchVisible = true;
       settingLink = false;
     }
-    this.setState({searchVisible, settingLink});
+    this.setState({ searchVisible, settingLink });
   };
 
   onSearchButtonClick = event => {
@@ -76,7 +77,7 @@ class Navbar extends Component {
             <div
               id="searchIcon"
               onClick={this.onSearchButtonClick}
-              className={this.state.searchVisible ? "searchActive" : null}
+              className={this.state.searchVisible ? "activeBtn" : null}
             >
               <i className="fas fa-search fa-lg" />
             </div>
@@ -103,15 +104,17 @@ class Navbar extends Component {
             <i className="fas fa-plus fa-lg" />
           </button>
           <div id="settings">
-            {
-              this.isMobile()
-              ? (<Link to={this.props.pathname === '/settings' ? '/' : '/settings'}>
-                  <i className="fas fa-cog fa-lg" />
-                </Link>)
-              : (<Drop icon="fas fa-cog fa-lg" right>
-                  <SettingMenu option="drop-item" />
-                </Drop>)
-            }
+            {this.isMobile() ? (
+              <Link
+                to={this.props.pathname === "/settings" ? "/" : "/settings"}
+              >
+                <i className="fas fa-cog fa-lg" />
+              </Link>
+            ) : (
+              <Drop icon="fas fa-cog fa-lg" right>
+                <SettingMenu option="drop-item" />
+              </Drop>
+            )}
           </div>
         </div>
       </nav>
