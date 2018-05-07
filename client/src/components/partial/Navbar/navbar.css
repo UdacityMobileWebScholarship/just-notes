@@ -120,6 +120,13 @@
 input[type="text"]::-ms-clear {
     display: none;
 }
+#settings a{
+    color: inherit;
+}
+#settings a:hover{
+    color: rgba(137, 129, 216, 0.7);
+    text-decoration: none;
+}
 /** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {
     #brand {

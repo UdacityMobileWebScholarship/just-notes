@@ -49,7 +49,7 @@ const RouteManager = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/settings" component={Settings} />
+        <Route path="/settings" render={(props) => <Settings {...props} />} />
         <Route component={NotFound} />
       </Switch>
     </Router>
