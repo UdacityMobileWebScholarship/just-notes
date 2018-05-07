@@ -19,6 +19,9 @@
 .drop-triger {
   cursor: pointer;
 }
+.drop-triger:active, .drop-triger:focus {
+  color: var(--black);
+}
 
 .drop-menu {
   position: absolute;

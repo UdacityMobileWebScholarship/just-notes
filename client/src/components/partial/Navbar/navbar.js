@@ -19,7 +19,8 @@ class Navbar extends Component {
 
   handleResize = () => {
     let searchVisible, settingLink;
-    if (this.isMobile()) {
+    const isMobile = this.isMobile();
+    if (isMobile) {
       if (this.state.searchQuery) {
         searchVisible = true;
       }
@@ -28,7 +29,14 @@ class Navbar extends Component {
       searchVisible = true;
       settingLink = false;
     }
-    this.setState({ searchVisible, settingLink });
+    this.setState({ searchVisible, settingLink }, () => {
+      if(!isMobile && this.props.pathname === '/settings') {
+        this.props.history.push('/');
+        setTimeout(() => {
+          document.querySelector('.drop-triger').click();
+        }, 600);
+      }
+    });
   };
 
   onSearchButtonClick = event => {
@@ -106,6 +114,7 @@ class Navbar extends Component {
           <div id="settings">
             {this.isMobile() ? (
               <Link
+                className={this.props.pathname === '/settings' ? "activeBtn" : null}
                 to={this.props.pathname === "/settings" ? "/" : "/settings"}
               >
                 <i className="fas fa-cog fa-lg" />
