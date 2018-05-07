@@ -78,7 +78,7 @@
     color: var(--warm-grey);
   }
   #tools > a:hover {
-    color: var(--primary-color);
+    color: var(--black);
   }
   .editorInnerContainer {
     padding-left: 25px;
