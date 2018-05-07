@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    font-size: 35px;
+    font-size: 20px;
     user-select: none;
 }
 .options .opt:first-child {
@@ -19,13 +19,13 @@
 }
 .options .opt {
     display: flex;
-    width: 50vh;
+    width: 100%;
     margin-bottom: 20px;
 }
 .options .opt-header {
     color: var(--primary-color);
     font-weight: 600;
     text-align: left;
-    width: 50vh;
+    width: 100%;
     margin: 0;
 }

@@ -1,3 +1,5 @@
+@import "../themes/dark.css";
+
 .drop {
   position: relative;
   display: inline-block;
@@ -6,6 +8,12 @@
 .drop button {
   background-color: transparent;
   border: 1px solid transparent;
+  color: var(--warm-grey);
+  outline: none;
+}
+
+.drop button:hover {
+  color: var(--black);
 }
 
 .drop-triger {
@@ -18,11 +26,11 @@
   left: 0;
   display: none;
   min-width: 14rem;
-  padding: .5rem 0;
+  padding: 1.5rem 0;
   margin: 10px 0 0;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 0px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
   border-radius: .25rem;
 }
 .drop-menu.menu-right {
@@ -37,7 +45,7 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: .25rem 1.5rem;
+  padding: 1rem 1.5rem;
   font-size: 15px;
 }
 .drop-item .slider{

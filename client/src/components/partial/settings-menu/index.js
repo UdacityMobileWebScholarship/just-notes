@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import PropTypes from "prop-types";
 import Slider from "../Slider";
 
-const headerStyle = {color: "var(--primary-color)", fontWeight: 600}
+const headerStyle = {color: "var(--primary-color)", fontWeight: 600, paddingBottom: 1, fontSize: 12}
 
 export default class SettingMenu extends Component {
   constructor() {

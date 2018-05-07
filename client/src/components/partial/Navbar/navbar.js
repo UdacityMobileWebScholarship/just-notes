@@ -62,9 +62,9 @@ class Navbar extends Component {
     return (
       <nav id="navContainer">
         <div id="brand">
-        <a href="/">
-          <span>Just Notes</span>
-        </a>
+          <a href="/">
+            <span>Just Notes</span>
+          </a>
         </div>
         <div id="searchbar">
           <div id="searchForm">

@@ -172,15 +172,13 @@ input[type="text"]::-ms-clear {
     } */
     #searchIcon {
         display: flex;
-        opacity: 0.7;
         align-items: center;
         justify-content: center;
-        color: var(--black);
+        color: var(--warm-grey);
         margin-right: 15px;
     }
     #searchIcon:hover, .searchActive {
         color: var(--black);
-        opacity: 0.7;
         cursor: default;
     }
     #searchField {
@@ -232,7 +230,7 @@ input[type="text"]::-ms-clear {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--black);
+        color: var(--warm-grey);
     }
 }
 
