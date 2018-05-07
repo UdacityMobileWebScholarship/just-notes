@@ -24,6 +24,15 @@
     line-height: 17px;
 }
 
+#brand > a {
+    text-decoration: none;
+    color: var(--white-100);
+}
+#brand > a:hover {
+    text-decoration: none;
+    color: var(--white-70);
+}
+
 #searchbar {
     display: flex;
     align-items: center;
@@ -163,15 +172,13 @@ input[type="text"]::-ms-clear {
     } */
     #searchIcon {
         display: flex;
-        opacity: 0.7;
         align-items: center;
         justify-content: center;
-        color: var(--black);
+        color: var(--warm-grey);
         margin-right: 15px;
     }
     #searchIcon:hover, .searchActive {
         color: var(--black);
-        opacity: 0.7;
         cursor: default;
     }
     #searchField {
@@ -221,10 +228,9 @@ input[type="text"]::-ms-clear {
     #settings {
         margin-right: 40px;
         display: flex;
-        opacity: 0.7;
         align-items: center;
         justify-content: center;
-        color: var(--black);
+        color: var(--warm-grey);
     }
 }
 

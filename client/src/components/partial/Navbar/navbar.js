@@ -1,5 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
+import Drop from "../dropdown";
+import SettingMenu from "../settings-menu";
 
 class Navbar extends Component {
   state = {
@@ -16,9 +19,7 @@ class Navbar extends Component {
     if (this.isMobile()) {
       if (this.state.searchQuery) {
         this.setState({ searchVisible: true });
-      } else {
-        this.setState({ searchVisible: false });
-      }
+      } 
     } else {
       this.setState({ searchVisible: true });
     }
@@ -61,7 +62,9 @@ class Navbar extends Component {
     return (
       <nav id="navContainer">
         <div id="brand">
-          <span>Just Notes</span>
+          <a href="/">
+            <span>Just Notes</span>
+          </a>
         </div>
         <div id="searchbar">
           <div id="searchForm">
@@ -95,7 +98,13 @@ class Navbar extends Component {
             <i className="fas fa-plus fa-lg" />
           </button>
           <div id="settings">
-            <i className="fas fa-cog fa-lg" />
+            {
+              this.isMobile()
+              ? <Link to="/settings"><i className="fas fa-cog fa-lg" /></Link>
+              : (<Drop icon="fas fa-cog fa-lg" right>
+                  <SettingMenu option="drop-item" />
+                </Drop>)
+            }
           </div>
         </div>
       </nav>

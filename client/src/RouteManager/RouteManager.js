@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../pages/Home";
+import Settings from "../pages/Settings";
 import NotFound from "../pages/NotFound";
 
 /*
@@ -48,6 +49,7 @@ const RouteManager = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/settings" component={Settings} />
         <Route component={NotFound} />
       </Switch>
     </Router>

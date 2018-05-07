@@ -14,7 +14,7 @@ class NoteCard extends Component {
               <i className="fas fa-download" />
             </a>
             <a href="" title="Delete this note">
-              <i className="fas fa-trash" />
+              <i className="fas fa-trash-alt" />
             </a>
           </div>
           <span>Date</span>
