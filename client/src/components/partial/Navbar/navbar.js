@@ -7,7 +7,8 @@ import SettingMenu from "../settings-menu";
 class Navbar extends Component {
   state = {
     searchVisible: false,
-    searchQuery: ""
+    searchQuery: "",
+    settingLink: true,
   };
 
   isMobile = () => {
@@ -15,14 +16,18 @@ class Navbar extends Component {
     return width < 992;
   };
 
-  toggleForm = () => {
+  handleResize = () => {
+    let searchVisible, settingLink;
     if (this.isMobile()) {
       if (this.state.searchQuery) {
-        this.setState({ searchVisible: true });
-      } 
+        searchVisible = true;
+      }
+      settingLink = true;
     } else {
-      this.setState({ searchVisible: true });
+      searchVisible = true;
+      settingLink = false;
     }
+    this.setState({searchVisible, settingLink});
   };
 
   onSearchButtonClick = event => {
@@ -47,15 +52,15 @@ class Navbar extends Component {
   };
 
   componentWillMount() {
-    this.toggleForm();
+    this.handleResize();
   }
 
   componentDidMount() {
-    window.addEventListener("resize", this.toggleForm);
+    window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.toggleForm);
+    window.removeEventListener("resize", this.handleResize);
   }
 
   render() {
