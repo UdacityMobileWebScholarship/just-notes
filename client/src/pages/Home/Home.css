@@ -32,13 +32,9 @@
   background-size: 100% 2em;
 }
 #editorContainer {
-  display: flex;
-  position: relative;
+  display: grid;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 20px;
-  justify-content: space-evenly;
+  position: relative;
 }
 #notesCardContainer {
   display: grid;
