@@ -3,9 +3,9 @@ import Navbar from "../../components/partial/Navbar";
 import SettingMenu from "../../components/partial/settings-menu";
 import "./Settings.css";
 
-const Settings = ({ location: { pathname } }) => (
+const Settings = ({ history, location: { pathname } }) => (
   <div className="Setting-menu">
-    <Navbar pathname={pathname} />
+    <Navbar history={history} pathname={pathname} />
     <div className="options">
       <SettingMenu option="opt" />
     </div>
