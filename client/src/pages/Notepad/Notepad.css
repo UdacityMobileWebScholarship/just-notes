@@ -27,6 +27,8 @@
   font-weight: 700;
   /*border: none;*/
   color: var(--black);
+  width: 100%;
+  max-width: 100%;
   border: 2px solid sandybrown;
 }
 #noteTitle:disabled {
