@@ -1,8 +1,19 @@
 import React, { Component, Fragment } from "react";
+import { Editor } from "slate-react";
+import { Value } from "slate";
+import initialValue from "./value.json";
 
 import "./Notepad.css";
 
 class Notepad extends Component {
+  state = {
+    value: Value.fromJSON(initialValue)
+  };
+
+  onChange = ({ value }) => {
+    this.setState({ value });
+  };
+
   render() {
     return (
       <Fragment>
@@ -28,6 +39,15 @@ class Notepad extends Component {
                 <i className="fas fa-share-square" />
               </a>
             </div>
+          </div>
+          <div className="editorBody">
+            <Editor
+              placeholder="Let's write something..."
+              value={this.state.value}
+              onChange={this.onChange}
+              spellCheck
+              autoFocus
+            />
           </div>
         </div>
       </Fragment>
