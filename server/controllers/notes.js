@@ -16,7 +16,7 @@ const notesController = {
                 })
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error Creating Note!'
                 })
@@ -35,7 +35,7 @@ const notesController = {
                 })
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error updating Note!'
                 })
@@ -53,7 +53,7 @@ const notesController = {
                 })
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error deleting Note!'
                 })
@@ -71,7 +71,7 @@ const notesController = {
                 }) 
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error Fetching Notes!'
                 })
@@ -80,7 +80,7 @@ const notesController = {
 
     get: (req, res) => {
         let slugId = req.params.id
-        Note.find({sulg : sulgId})
+        Note.find({sulg : slugId})
             .then(notes => {
                 notes = notes || []
                 return res.status(200).json({
