@@ -1,19 +1,25 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./leftMenu.css";
 
 class LeftMenu extends Component {
+  view = (e) => {
+    e.preventDefault();
+    const {currentTarget} = e;
+    document.querySelector('.link.active').classList.remove('active');
+    currentTarget.classList.add('active');
+    this.props.setView(currentTarget.href.split('#')[1] === 'cards');
+  }
   render() {
     return (
       <div id="leftPanelContainer">
         <div id="linkContainer">
-          <Link to="/" className="link active">
+          <a href="#cards" className="link active" onClick={this.view}>
             <span className="linkText">My notes</span>
             <span className="linkBadge">15</span>
-          </Link>
-          <Link to="/keys" className="link">
+          </a>
+          <a href="#hotkeys" className="link" onClick={this.view}>
             <span className="linkText">Hot Keys</span>
-          </Link>
+          </a>
         </div>
         <div id="sharing">
           {["facebook-f", "linkedin-in", "twitter"].map(a => (
