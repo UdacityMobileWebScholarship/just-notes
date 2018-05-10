@@ -7,6 +7,12 @@ import Notepad from "../Notepad";
 import "./Home.css";
 
 class Home extends Component {
+  state = {
+    notepadValue: null
+  }
+  updateNotepadValue = (noteId) => {
+    
+  }
   render() {
     return (
       <Fragment>
@@ -17,16 +23,16 @@ class Home extends Component {
           </div>
           <div id="rightContainer">
             <div id="editorContainer">
-              <Notepad />
+              <Notepad value={this.state.notepadValue} />
             </div>
             <div id="notesCardContainer">
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
-              <NoteCard />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
+              <NoteCard onClick={this.updateNotepadValue} />
             </div>
           </div>
         </div>

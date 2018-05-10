@@ -2,22 +2,27 @@ import React, { Component } from "react";
 import "./noteCard.css";
 
 class NoteCard extends Component {
+  handleClick = ({target, currentTarget}) => {
+    if(target.title === ""  ) {
+      this.props.updateNotepadValue(currentTarget.getAttribute('data-note-slug'));
+    }
+  }
   render() {
     return (
-      <div className="noteContainer">
+      <div className="noteContainer" data-note-slug="note-1fn12" onClick={this.handleClick}>
         <div className="noteContentTop">
           <div>
-            <a href="" title="Share this note">
+            <a href="#share" title="Share this note">
               <i className="fas fa-share-square" />
             </a>
-            <a href="" title="Download this note">
+            <a href="#download" title="Download this note">
               <i className="fas fa-download" />
             </a>
-            <a href="" title="Delete this note">
+            <a href="#del" title="Delete this note">
               <i className="fas fa-trash-alt" />
             </a>
           </div>
-          <span>Date</span>
+          <span className="timestamp" title="date">Date</span>
         </div>
         <h2>Title</h2>
         <p>
