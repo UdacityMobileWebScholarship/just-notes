@@ -50,7 +50,7 @@ const RouteManager = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/settings" render={(props) => <Settings {...props} />} />
-        <Route component={NotFound} />
+        <Route render={props => <NotFound {...props} /> } />
       </Switch>
     </Router>
   );

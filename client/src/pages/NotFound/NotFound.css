@@ -16,3 +16,21 @@
     color: #aaa;
     text-shadow: 0 1px #fff;
 }
+.NotFound button, .NotFound a.linkBtn {
+    display: inline-block;
+    color: #444;
+    font-size: 20px;
+    padding: .375rem .75rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #eee;
+    border-radius: 5px;
+    user-select: none;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.NotFound button:hover, .NotFound a.linkBtn:hover{
+    background-color: #dae0e5;
+}
+.linkBtn:hover {
+    text-decoration: none;
+}
