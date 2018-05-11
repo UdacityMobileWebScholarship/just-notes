@@ -2,88 +2,56 @@
 
 .editorInnerContainer {
   display: flex;
-  flex-direction: column;
+  flex: 1;
   background-color: var(--white-100);
-  height: calc(100vh - 200px);
-  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+  border-radius: 5px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 50px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
-  border: 1px solid blue;
-}
-.editorTop {
-  display: flex;
-  /*border-bottom: 1px solid var(--warm-grey);*/
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border: 2px solid sienna;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .editorBody {
   display: flex;
   flex: 1;
-  overflow-y: auto;
-  border: 2px solid darkslategray;
 }
-.editorBody > div {
+.editorBody > textarea {
   width: 100%;
-}
-#noteTitle {
-  flex: 1;
-  height: 60px;
-  font-size: 18px;
-  line-height: 17px;
-  font-weight: 700;
-  /*border: none;*/
-  color: var(--black);
-  width: 100%;
-  max-width: 100%;
-  border: 2px solid sandybrown;
+  height: inherit;
+  resize: none;
+  border: none;
 }
 #noteTitle:disabled {
   background-color: var(--white-100);
 }
-#tools {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 70%;
-  height: 50px;
-  margin: 0 auto;
-  background-color: var(--primary-color);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border: 2px solid fuchsia;
-}
-#tools > a {
-  color: var(--white-70);
+
+/*#tools > a {
+  color: var(--black);
   padding: 12px;
 }
 #tools > a:hover {
   color: var(--white-100);
-}
+}*/
 /** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {
-  #tools {
-    width: 60%;
-  }
 }
 
 /** Medium devices (tablets, 768px and up) **/
 @media (min-width: 768px) {
-  #tools {
-    width: 50%;
-  }
 }
 
 /** Large devices (desktops, 992px and up) **/
 @media (min-width: 992px) {
-  #tools {
+  .editorInnerContainer {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .editorBody > textarea {
+    height: 300px;
+  }
+  /*#tools {
     position: relative;
     width: inherit;
     height: inherit;
@@ -95,12 +63,7 @@
   }
   #tools > a:hover {
     color: var(--black);
-  }
-  .editorInnerContainer {
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-top: 0;
-  }
+  }*/
 }
 
 /** Extra large devices (large desktops, 1200px and up) **/

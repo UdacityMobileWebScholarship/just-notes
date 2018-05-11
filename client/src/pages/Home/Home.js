@@ -9,10 +9,8 @@ import "./Home.css";
 class Home extends Component {
   state = {
     notepadValue: null
-  }
-  updateNotepadValue = (noteId) => {
-    
-  }
+  };
+  updateNotepadValue = noteId => {};
   render() {
     return (
       <Fragment>
@@ -23,7 +21,7 @@ class Home extends Component {
           </div>
           <div id="rightContainer">
             <div id="editorContainer">
-              <Notepad value={this.state.notepadValue} />
+              <Notepad />
             </div>
             <div id="notesCardContainer">
               <NoteCard onClick={this.updateNotepadValue} />

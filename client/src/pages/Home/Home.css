@@ -3,7 +3,6 @@
   flex: 1;
   flex-direction: row;
   height: 100vh;
-
 }
 #leftContainer {
   display: flex;
@@ -32,10 +31,14 @@
   background-size: 100% 2em;
 }
 #editorContainer {
-  display: grid;
+  display: flex;
+  flex: 1;
+  position: absolute;
   width: 100%;
-  position: relative;
-  border: 1px solid red;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 65px;
 }
 #notesCardContainer {
   display: grid;
@@ -62,6 +65,12 @@
 
 /** Large devices (desktops, 992px and up) **/
 @media (min-width: 992px) {
+  #editorContainer {
+    display: grid;
+    position: relative;
+    top: 0;
+    height: calc(100% - 200px);
+  }
   #notesCardContainer {
     padding-bottom: 0;
   }
