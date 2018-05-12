@@ -13,7 +13,7 @@ class Notepad extends Component {
                 type="text"
                 placeholder="Add a title"
                 disabled={true}
-                value={"Title"}
+                value={"Title and a loooooong text"}
               />
             </div>
             <div className="tools">

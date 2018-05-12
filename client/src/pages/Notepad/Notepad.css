@@ -39,6 +39,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 17px;
+  text-overflow: ellipsis;
   border: none;
 }
 .editorBody {
