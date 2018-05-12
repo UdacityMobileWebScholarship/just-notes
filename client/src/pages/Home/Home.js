@@ -8,9 +8,18 @@ import "./Home.css";
 
 class Home extends Component {
   state = {
-    notepadValue: null
+    notepadValue: null,
+    hideCards: false
   };
-  updateNotepadValue = noteId => {};
+  cardView = (state) => {
+    if(!state) {
+      state = !this.state.hideCards
+    }
+    this.setState({hideCards: state})
+  }
+  updateNotepadValue = noteId => {
+    this.setState({hideCards: true})
+  };
   render() {
     return (
       <Fragment>
@@ -23,7 +32,7 @@ class Home extends Component {
             <div id="editorContainer">
               <Notepad />
             </div>
-            <div id="notesCardContainer">
+            <div id="notesCardContainer" className={this.state.hideCards ? 'd-none' : ''}>
               <NoteCard onClick={this.updateNotepadValue} />
               <NoteCard onClick={this.updateNotepadValue} />
               <NoteCard onClick={this.updateNotepadValue} />

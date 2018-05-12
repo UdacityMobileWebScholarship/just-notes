@@ -4,7 +4,7 @@ import "./noteCard.css";
 class NoteCard extends Component {
   handleClick = ({ target, currentTarget }) => {
     if (target.title === "") {
-      this.props.updateNotepadValue(
+      this.props.onClick(
         currentTarget.getAttribute("data-note-slug")
       );
     }
