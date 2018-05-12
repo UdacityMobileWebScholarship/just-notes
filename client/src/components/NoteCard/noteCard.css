@@ -49,20 +49,24 @@
     color: var(--white-70);
 }
 
-.noteContainer:hover {
+.noteContainer:hover, .noteContainer.sel {
     box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
     background-color: var(--primary-color);
 
 }
 .noteContainer:hover h2,
-.noteContainer:hover p {
+.noteContainer.sel h2,
+.noteContainer:hover p,
+.noteContainer.sel p {
     color: var(--white-100);
 }
 
-.noteContainer:hover .noteContentTop>span{
+.noteContainer:hover .noteContentTop>span,
+.noteContainer.sel .noteContentTop>span{
     color:var(--white-70);
 }
-.noteContainer:hover .noteContentTop>div{
+.noteContainer:hover .noteContentTop>div,
+.noteContainer.sel .noteContentTop>div{
     visibility:visible;
 }
 
