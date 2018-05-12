@@ -39,6 +39,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 17px;
+  color: var(--black);
   text-overflow: ellipsis;
   border: none;
 }
@@ -48,6 +49,7 @@
 }
 .editorBody > textarea {
   width: 100%;
+  color: var(--brownish-grey);
   height: inherit;
   resize: none;
   border: none;
