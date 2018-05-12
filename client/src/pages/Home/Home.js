@@ -10,15 +10,17 @@ class Home extends Component {
   state = {
     notepadValue: null,
     hideCards: false,
-    showPad: false
+    showPad: false,
+    newPad: false
   };
   isMobile = () => {
     const width = window.innerWidth;
     return width < 992;
   };
-  toggleView = showPad => {
+  toggleView = (showPad, obj = {}) => {
     this.setState({
       showPad,
+      ...obj,
       hideCards: showPad === true ? this.isMobile() : false
     });
     if(showPad === false) {
@@ -40,6 +42,9 @@ class Home extends Component {
       hideCards: this.isMobile() ? !!prv.showPad : false
     }));
   };
+  getNewPad = () => {
+    this.toggleView(true, {newPad: true});
+  }
   componentDidMount() {
     window.addEventListener("resize", this.handleResize);
   }
@@ -49,7 +54,7 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar />
+        <Navbar getNewPad={this.getNewPad} />
         <div className="pageContainer">
           <div id="leftContainer">
             <LeftMenu />
@@ -59,7 +64,7 @@ class Home extends Component {
               id="editorContainer"
               className={!this.state.showPad ? "d-none" : ""}
             >
-              <Notepad toggleView={this.toggleView} />
+              <Notepad newPad={this.state.newPad} toggleView={this.toggleView} />
             </div>
             <div
               id="notesCardContainer"

@@ -108,7 +108,7 @@ class Navbar extends Component {
             ) : null}
           </div>
 
-          <button id="addNoteBtn" type="button">
+          <button id="addNoteBtn" type="button" onClick={this.props.getNewPad}>
             <i className="fas fa-plus fa-lg" />
           </button>
           <div id="settings">

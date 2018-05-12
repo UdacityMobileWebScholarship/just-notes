@@ -3,9 +3,24 @@ import React, { Component, Fragment } from "react";
 import "./Notepad.css";
 
 class Notepad extends Component {
-  state = {
-    previewMode: true
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      previewMode: true,
+      padTitle: props.newPad ? '' : 'Title and a loooooong text',
+      padText: props.newPad ? '' : 'I am some paragraph\nI am line two of the paragraph'
+    }
+  }
+  handleChange = ({target: {value, name}}) => {
+    this.setState({[name]: value});
+  }
+  componentWillReceiveProps({newPad}) {
+    if(newPad) {
+      this.setState({previewMode: false, padText: '', padTitle: ''}, () => {
+        document.querySelector('input[name="padTitle"]').focus();
+      });
+    }
+  }
   edit = e => {
     e.preventDefault();
     if (this.state.previewMode) {
@@ -33,9 +48,11 @@ class Notepad extends Component {
             <div className="title">
               <input
                 type="text"
+                name="padTitle"
                 placeholder="Add a title"
                 disabled={this.state.previewMode}
-                value={"Title and a loooooong text"}
+                value={this.state.padTitle}
+                onChange={this.handleChange}
               />
             </div>
             {this.state.previewMode ? (
@@ -70,9 +87,11 @@ class Notepad extends Component {
           </div>
           <div className="editorBody">
             <textarea
+              name="padText"
               placeholder="Write Something.."
               disabled={this.state.previewMode}
-              value={`I am some paragraph\nI am line two of the paragraph`}
+              value={this.state.value}
+              onChange={this.handleChange}
               ref="notepad"
             />
           </div>
