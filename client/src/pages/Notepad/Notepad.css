@@ -22,6 +22,17 @@
 .title {
   flex: 1;
 }
+.tools {
+    display: flex;
+    align-items: center;
+}
+.tools > a {
+    color: var(--warm-grey);
+    padding: 10px;
+}
+.tools > a:hover {
+    color: var(--black);
+}
 .title > input[type=text] {
   width: 100%;
   height: 50px;
@@ -43,13 +54,9 @@
 .title > input[type=text]:disabled, .editorBody > textarea {
   background-color: var(--white-100);
 }
-/*#tools > a {
-  color: var(--black);
-  padding: 12px;
+#download, #share {
+    display: none;
 }
-#tools > a:hover {
-  color: var(--white-100);
-}*/
 /** Small devices (landscape phones, 576px and up) **/
 @media (min-width: 576px) {
 }
@@ -69,19 +76,15 @@
   .editorBody > textarea {
     height: 300px;
   }
-  /*#tools {
-    position: relative;
-    width: inherit;
-    height: inherit;
-    background-color: transparent;
-    border-radius: 0;
+  .tools > a {
+    padding: 12px;
   }
-  #tools > a {
-    color: var(--warm-grey);
+  #download, #share {
+    display: block;
   }
-  #tools > a:hover {
-    color: var(--black);
-  }*/
+  #close {
+    display: none;
+  }
 }
 
 /** Extra large devices (large desktops, 1200px and up) **/
