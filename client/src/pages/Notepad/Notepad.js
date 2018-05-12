@@ -9,7 +9,9 @@ class Notepad extends Component {
   edit = e => {
     e.preventDefault();
     if (this.state.previewMode) {
-      this.setState({ previewMode: false });
+      this.setState({ previewMode: false }, () => {
+        this.refs.notepad.focus();
+      });
     }
   };
   goBack = e => {
@@ -64,6 +66,7 @@ class Notepad extends Component {
               placeholder="Write Something.."
               disabled={this.state.previewMode}
               value={`I am some paragraph\nI am line two of the paragraph`}
+              ref="notepad"
             />
           </div>
         </div>
