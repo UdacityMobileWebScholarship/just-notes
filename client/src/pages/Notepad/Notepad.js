@@ -11,6 +11,13 @@ class Notepad extends Component {
     if (this.state.previewMode) {
       this.setState({ previewMode: false }, () => {
         this.refs.notepad.focus();
+        if (typeof this.refs.notepad.selectionStart == "number") {
+          this.refs.notepad.selectionStart = this.refs.notepad.selectionEnd = this.refs.notepad.value.length;
+        } else if (typeof this.refs.notepad.createTextRange != "undefined") {
+          var range = this.refs.notepad.createTextRange();
+          range.collapse(false);
+          range.select();
+        }
       });
     }
   };
