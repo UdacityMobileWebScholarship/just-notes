@@ -21,6 +21,12 @@ class Home extends Component {
       showPad,
       hideCards: showPad === true ? this.isMobile() : false
     });
+    if(showPad === false) {
+      const ol = document.querySelector('.noteContainer.sel');
+      if(ol) {
+        ol.classList.remove('sel');
+      }
+    }
   };
   updateNotepadValue = noteId => {
     let newState = { showPad: true };
