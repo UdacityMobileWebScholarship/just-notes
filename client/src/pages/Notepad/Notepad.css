@@ -3,6 +3,7 @@
 .editorInnerContainer {
   display: flex;
   flex: 1;
+  flex-direction: column;
   background-color: var(--white-100);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
   border-radius: 5px;
@@ -10,6 +11,24 @@
   margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.editorTop {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--warm-grey);
+}
+.title {
+  flex: 1;
+}
+.title > input[type=text] {
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 17px;
+  border: none;
 }
 .editorBody {
   display: flex;
@@ -21,10 +40,9 @@
   resize: none;
   border: none;
 }
-#noteTitle:disabled {
+.title > input[type=text]:disabled, .editorBody > textarea {
   background-color: var(--white-100);
 }
-
 /*#tools > a {
   color: var(--black);
   padding: 12px;

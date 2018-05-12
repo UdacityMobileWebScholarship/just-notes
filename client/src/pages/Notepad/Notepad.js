@@ -7,8 +7,13 @@ class Notepad extends Component {
     return (
       <Fragment>
         <div className="editorInnerContainer">
+          <div className="editorTop">
+            <div className="title">
+              <input type="text" placeholder="Add a title" disabled={true} />
+            </div>
+          </div>
           <div className="editorBody">
-            <textarea placeholder="Write Something.." />
+            <textarea placeholder="Write Something.." disabled={true} />
           </div>
         </div>
       </Fragment>
