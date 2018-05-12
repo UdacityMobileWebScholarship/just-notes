@@ -31,7 +31,7 @@ class Home extends Component {
   };
   handleResize = () => {
     this.setState(prv => ({
-      hideCards: this.isMobile() ? (prv.showPad ? true : false) : false
+      hideCards: this.isMobile() ? !!prv.showPad : false
     }));
   };
   componentDidMount() {
