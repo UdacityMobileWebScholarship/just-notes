@@ -15,7 +15,7 @@ class Navbar extends Component {
   isMobile = () => {
     const width = window.innerWidth;
     return width < 992;
-  };
+  }
 
   handleResize = () => {
     let searchVisible, settingLink;

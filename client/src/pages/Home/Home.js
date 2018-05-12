@@ -9,17 +9,23 @@ import "./Home.css";
 class Home extends Component {
   state = {
     notepadValue: null,
-    hideCards: false
-  };
-  cardView = (state) => {
-    if(!state) {
-      state = !this.state.hideCards
-    }
-    this.setState({hideCards: state})
+    hideCards: false,
+    showPad: false
+  }
+  isMobile = () => {
+    const width = window.innerWidth;
+    return width < 992;
+  }
+  toogleView = (showPad) => {
+    this.setState({showPad, hideCards: showPad === true ? this.isMobile() : false});
   }
   updateNotepadValue = noteId => {
-    this.setState({hideCards: true})
-  };
+    let newState = {showPad: true};
+    if(this.isMobile()) {
+      newState.hideCards = true
+    }
+    this.setState(newState)
+  }
   render() {
     return (
       <Fragment>
@@ -29,8 +35,8 @@ class Home extends Component {
             <LeftMenu />
           </div>
           <div id="rightContainer">
-            <div id="editorContainer">
-              <Notepad />
+            <div id="editorContainer" className={!this.state.showPad ? 'd-none' : ''}>
+              <Notepad toogleView={this.toogleView} />
             </div>
             <div id="notesCardContainer" className={this.state.hideCards ? 'd-none' : ''}>
               <NoteCard onClick={this.updateNotepadValue} />
