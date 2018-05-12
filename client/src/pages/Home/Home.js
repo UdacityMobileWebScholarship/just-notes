@@ -11,21 +11,24 @@ class Home extends Component {
     notepadValue: null,
     hideCards: false,
     showPad: false
-  }
+  };
   isMobile = () => {
     const width = window.innerWidth;
     return width < 992;
-  }
-  toogleView = (showPad) => {
-    this.setState({showPad, hideCards: showPad === true ? this.isMobile() : false});
-  }
+  };
+  toggleView = showPad => {
+    this.setState({
+      showPad,
+      hideCards: showPad === true ? this.isMobile() : false
+    });
+  };
   updateNotepadValue = noteId => {
-    let newState = {showPad: true};
-    if(this.isMobile()) {
-      newState.hideCards = true
+    let newState = { showPad: true };
+    if (this.isMobile()) {
+      newState.hideCards = true;
     }
-    this.setState(newState)
-  }
+    this.setState(newState);
+  };
   render() {
     return (
       <Fragment>
@@ -35,10 +38,16 @@ class Home extends Component {
             <LeftMenu />
           </div>
           <div id="rightContainer">
-            <div id="editorContainer" className={!this.state.showPad ? 'd-none' : ''}>
-              <Notepad toogleView={this.toogleView} />
+            <div
+              id="editorContainer"
+              className={!this.state.showPad ? "d-none" : ""}
+            >
+              <Notepad toggleView={this.toggleView} />
             </div>
-            <div id="notesCardContainer" className={this.state.hideCards ? 'd-none' : ''}>
+            <div
+              id="notesCardContainer"
+              className={this.state.hideCards ? "d-none" : ""}
+            >
               <NoteCard onClick={this.updateNotepadValue} />
               <NoteCard onClick={this.updateNotepadValue} />
               <NoteCard onClick={this.updateNotepadValue} />

@@ -23,15 +23,15 @@
   flex: 1;
 }
 .tools {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .tools > a {
-    color: var(--warm-grey);
-    padding: 10px;
+  color: var(--warm-grey);
+  padding: 10px;
 }
 .tools > a:hover {
-    color: var(--black);
+  color: var(--black);
 }
 .title > input[type=text] {
   width: 100%;
@@ -82,9 +82,6 @@
   }
   #download, #share {
     display: block;
-  }
-  #close {
-    display: none;
   }
 }
 

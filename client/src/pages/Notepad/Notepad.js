@@ -3,10 +3,10 @@ import React, { Component, Fragment } from "react";
 import "./Notepad.css";
 
 class Notepad extends Component {
-  goBack = (e) => {
+  goBack = e => {
     e.preventDefault();
-    this.props.toogleView(false);
-  }
+    this.props.toggleView(false);
+  };
   render() {
     return (
       <Fragment>
@@ -32,8 +32,13 @@ class Notepad extends Component {
               </a>
               <a id="share" href="" title="Share this note">
                 <i className="fas fa-share-square" />
-              </a>  
-              <a id="close" href="#close" onClick={this.goBack} title="Close this note">
+              </a>
+              <a
+                id="close"
+                href="#close"
+                onClick={this.goBack}
+                title="Close this note"
+              >
                 <i className="fas fa-times" />
               </a>
             </div>
