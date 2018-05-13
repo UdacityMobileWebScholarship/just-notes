@@ -36,6 +36,11 @@ You need following tools to run this project:
     > git clone https://github.com/UdacityMobileWebScholarship/just-notes.git
     > cd just-notes
     > git checkout release
+    > cd server
+    > npm install
+    > npm start
+    > cd..
+    > cd client
     > npm install
     > npm start
     ```
