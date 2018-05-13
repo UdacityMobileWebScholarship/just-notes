@@ -4,14 +4,12 @@ import "./noteCard.css";
 class NoteCard extends Component {
   handleClick = ({ target, currentTarget }) => {
     if (target.title === "") {
-      const ol = document.querySelector('.noteContainer.sel');
-      if(ol) {
-        ol.classList.remove('sel');
+      const ol = document.querySelector(".noteContainer.sel");
+      if (ol) {
+        ol.classList.remove("sel");
       }
-      currentTarget.classList.add('sel');
-      this.props.onClick(
-        currentTarget.getAttribute("data-note-slug")
-      );
+      currentTarget.classList.add("sel");
+      this.props.onClick(currentTarget.getAttribute("data-note-slug"));
     }
   };
   render() {

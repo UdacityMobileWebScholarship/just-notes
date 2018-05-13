@@ -8,7 +8,6 @@ import "./Home.css";
 
 class Home extends Component {
   state = {
-    notepadValue: null,
     hideCards: false,
     showPad: false
   };
@@ -21,10 +20,10 @@ class Home extends Component {
       showPad,
       hideCards: showPad === true ? this.isMobile() : false
     });
-    if(showPad === false) {
-      const ol = document.querySelector('.noteContainer.sel');
-      if(ol) {
-        ol.classList.remove('sel');
+    if (showPad === false) {
+      const ol = document.querySelector(".noteContainer.sel");
+      if (ol) {
+        ol.classList.remove("sel");
       }
     }
   };

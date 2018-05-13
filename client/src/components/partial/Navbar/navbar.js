@@ -15,7 +15,7 @@ class Navbar extends Component {
   isMobile = () => {
     const width = window.innerWidth;
     return width < 992;
-  }
+  };
 
   handleResize = () => {
     let searchVisible, settingLink;
@@ -30,10 +30,10 @@ class Navbar extends Component {
       settingLink = false;
     }
     this.setState({ searchVisible, settingLink }, () => {
-      if(!isMobile && this.props.pathname === '/settings') {
-        this.props.history.push('/');
+      if (!isMobile && this.props.pathname === "/settings") {
+        this.props.history.push("/");
         setTimeout(() => {
-          document.querySelector('.drop-triger').click();
+          document.querySelector(".drop-triger").click();
         }, 600);
       }
     });
@@ -111,10 +111,13 @@ class Navbar extends Component {
           <button id="addNoteBtn" type="button">
             <i className="fas fa-plus fa-lg" />
           </button>
+
           <div id="settings">
             {this.isMobile() ? (
               <Link
-                className={this.props.pathname === '/settings' ? "activeBtn" : null}
+                className={
+                  this.props.pathname === "/settings" ? "activeBtn" : null
+                }
                 to={this.props.pathname === "/settings" ? "/" : "/settings"}
               >
                 <i className="fas fa-cog fa-lg" />
