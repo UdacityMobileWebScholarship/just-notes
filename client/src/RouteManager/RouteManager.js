@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Home from "../pages/Home";
 import Settings from "../pages/Settings";
 import NotFound from "../pages/NotFound";
@@ -49,6 +49,11 @@ const RouteManager = () => {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/new-note" component={Home} />
+        <Redirect exact from="/view" to="/" />
+        <Route path="/view/:id" component={Home} />
+        <Redirect exact from="/edit" to="/" />
+        <Route path="/edit/:id" component={Home} />
         <Route path="/settings" render={(props) => <Settings {...props} />} />
         <Route component={NotFound} />
       </Switch>

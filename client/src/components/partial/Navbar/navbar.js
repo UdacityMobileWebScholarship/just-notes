@@ -108,9 +108,9 @@ class Navbar extends Component {
             ) : null}
           </div>
 
-          <button id="addNoteBtn" type="button" onClick={this.props.getNewPad}>
+          <Link id="addNoteBtn" to="/new-note">
             <i className="fas fa-plus fa-lg" />
-          </button>
+          </Link>
           <div id="settings">
             {this.isMobile() ? (
               <Link

@@ -15,10 +15,11 @@ class NoteCard extends Component {
     }
   };
   render() {
+    const { props: { id, title, text, date } } = this;
     return (
       <div
         className="noteContainer"
-        data-note-slug="note-1fn12"
+        data-note-slug={`note-${id}`}
         onClick={this.handleClick}
       >
         <div className="noteContentTop">
@@ -34,14 +35,11 @@ class NoteCard extends Component {
             </a>
           </div>
           <span className="timestamp" title="date">
-            Date
+            {date}
           </span>
         </div>
-        <h2>Title</h2>
-        <p>
-          I am some paragraph<br />
-          I am line two of the paragraph
-        </p>
+        <h2>{title}</h2>
+        <p dangerouslySetInnerHTML={{__html: text}}></p>
       </div>
     );
   }
