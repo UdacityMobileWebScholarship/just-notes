@@ -16,7 +16,7 @@ const notesController = {
                 })
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error Creating Note!'
                 })
@@ -24,13 +24,40 @@ const notesController = {
     },
 
     update: (req, res) => {
-        console.log(`update: ${req.params}`)
-        res.send('ok')
+        let slugId = req.params.id
+
+        Note.update({slug:slugId}, {$set: { title: req.body.title, notes: req.body.notes} })
+            .then(note =>{
+                return res.status(200).json({
+                    error: false,
+                    message: 'Note updated',
+                    note: note
+                })
+            })
+            .catch(error => {
+                return res.status(404).json({
+                    error: true,
+                    message: 'Error updating Note!'
+                })
+            })
     },
 
     delete: (req, res) => {
-        console.log(`delete: ${req.params}`)
-        res.send('ok')
+        let slugId = req.params.id
+
+        Note.update({slug:slugId}, {$set: { deleted: true} })
+            .then(note =>{
+                return res.status(200).json({
+                    error: false,
+                    message: 'Note delted',
+                })
+            })
+            .catch(error => {
+                return res.status(404).json({
+                    error: true,
+                    message: 'Error deleting Note!'
+                })
+            })
     },
 
     index: (req, res) => {
@@ -44,7 +71,7 @@ const notesController = {
                 }) 
             })
             .catch(error => {
-                return res.status(500).json({
+                return res.status(404).json({
                     error: true,
                     message: 'Error Fetching Notes!'
                 })
@@ -52,8 +79,18 @@ const notesController = {
     },
 
     get: (req, res) => {
-        console.log(`get: ${req.params}`)
-        res.send('ok')
+        let slugId = req.params.id
+        Note.find({sulg : slugId})
+            .then(notes => {
+                notes = notes || []
+                return res.status(200).json({
+                    error: false,
+                    notes: notes, 
+                }) 
+            })
+            .catch(error => {
+
+            })
     }
 }
 
