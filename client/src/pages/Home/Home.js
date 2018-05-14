@@ -7,10 +7,32 @@ import Notepad from "../Notepad";
 import "./Home.css";
 
 class Home extends Component {
-  state = {
-    hideCards: false,
-    showPad: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      hideCards: false,
+      showPad: false,
+      allData: []
+    };
+  }
+  
+  componentWillMount(){
+    var _this = this;
+    var allData = [];
+    fetch(`http://localhost:8080/notes/`)
+    .then( function(response) {
+      return response.json();
+    })
+    .then( function(response) {
+      var res = response;
+      res.notes.map(eachRes => {
+        allData.push(eachRes);
+      });
+      _this.setState({ allData: allData});
+    })
   };
+
+ 
   isMobile = () => {
     const width = window.innerWidth;
     return width < 992;
@@ -46,6 +68,12 @@ class Home extends Component {
     window.removeEventListener("resize", this.handleResize);
   }
   render() {
+    var notes = [];
+    console.log(this.state.allData);
+    this.state.allData.map(a => {
+      notes.push(<NoteCard data={a} onClick={this.updateNotepadValue} />);
+    });
+    //console.log(notes);
     return (
       <Fragment>
         <Navbar />
@@ -64,13 +92,14 @@ class Home extends Component {
               id="notesCardContainer"
               className={this.state.hideCards ? "d-none" : ""}
             >
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
-              <NoteCard onClick={this.updateNotepadValue} />
+              {/* <NoteCard data ={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} />
+              <NoteCard data={} onClick={this.updateNotepadValue} /> */}
+              {notes}
             </div>
           </div>
         </div>

@@ -13,6 +13,11 @@ class NoteCard extends Component {
     }
   };
   render() {
+    const { updated_at, title, notes } = this.props.data;
+    debugger;
+    var day = new Date(Date.parse(updated_at));
+    day = day.getDate()+'/'+day.getMonth()+'/'+day.getFullYear();
+    console.log("fff", day);
     return (
       <div
         className="noteContainer"
@@ -32,13 +37,12 @@ class NoteCard extends Component {
             </a>
           </div>
           <span className="timestamp" title="date">
-            Date
+            {day}
           </span>
         </div>
-        <h2>Title</h2>
+        <h2>{title}</h2>
         <p>
-          I am some paragraph<br />
-          I am line two of the paragraph
+          {notes}
         </p>
       </div>
     );
